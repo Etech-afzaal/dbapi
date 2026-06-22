@@ -14,7 +14,7 @@ export async function POST(request) {
             ClientIP = "::1",
             JsonReq,
             Notes = "",
-            dbapiUrl = process.env.NEXT_PUBLIC_DBAPI_URL || "http://dev-dbapi.eliteny.com/Web/DBAPI/ProcessRequest",
+            dbapiUrl = process.env.NEXT_PUBLIC_DBAPI_DEV_URL,
         } = body;
 
         // Validate required parameters - DBAPI doesn't accept null values

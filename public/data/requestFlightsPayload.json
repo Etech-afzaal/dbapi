@@ -37,7 +37,7 @@
                     "p_VP_USERID": "2014092400038",
                     "FlightID": "",
                     "DepartureAirport": "LGA",
-                    "DepartureDate": "20240930",
+                    "DepartureDate": "20260719",
                     "DepartureHour": "1300",
                     "ArrivalAirport": "",
                     "ArrivalDate": "",
@@ -90,7 +90,7 @@
                     "DepartureDate": "",
                     "DepartureHour": "",
                     "ArrivalAirport": "JFK",
-                    "ArrivalDate": "20240929",
+                    "ArrivalDate": "20260719",
                     "ArrivalHour": "1300",
                     "Airline": "",
                     "SimpleStatus": ""

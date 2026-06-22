@@ -4,9 +4,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Lambda API Client",
+  title: "DBAPI Client",
   description:
-    "Lambda API Client to test Amazon Gateway API, Lambda API End Point, Cognito Token Authentication, DB API and DB Interface",
+    "DBAPI Client to DBAPI",
+  icons: {
+    icon: "/dbapi.png",
+  },
 };
 
 export default function RootLayout({ children }) {

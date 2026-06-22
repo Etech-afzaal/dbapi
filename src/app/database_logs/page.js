@@ -1,17 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import styles from "../flights.module.css";
-import {
-  CognitoIdentityProviderClient,
-  InitiateAuthCommand,
-} from "@aws-sdk/client-cognito-identity-provider";
+import styles from "../page.module.css";
 import axios from "axios";
 import Link from "next/link";
 
-const FlightViewApiTest = () => {
+const GatewayApiTest = () => {
   const [gatewayApiUrl, setGatewayApiUrl] = useState(
-    process.env.NEXT_PUBLIC_API_FLIGHTVIEW_URL_DEVP
+    process.env.NEXT_PUBLIC_DBAPI_DEV_URL
   );
   const [gatewayApiRequest, setGatewayApiRequest] = useState();
   const [gatewayApiRequestNotes, setGatewayApiRequestNotes] = useState();
@@ -19,20 +15,51 @@ const FlightViewApiTest = () => {
   const [gatewayApiResponseText, setGatewayApiResponseText] = useState("");
   const [rawGatewayApiResponse, setRawGatewayApiResponse] = useState(""); // To store raw response
   const [showRaw, setShowRaw] = useState(false); // Toggle between raw and beautified view
-  const [authTokenId, setAuthTokenId] = useState();
-  const [username, setUsername] = useState(
-    process.env.NEXT_PUBLIC_COGNITO_USERNAME
-  );
-  const [password, setPassword] = useState(
-    process.env.NEXT_PUBLIC_COGNITO_PASSWORD
-  );
+
   const [inProgress, setInProgress] = useState(false);
-  const [gettingToken, setGettingToken] = useState(false);
 
   const [infoLabel, setInfoLabel] = useState("");
   const [actionCodes, setActionCodes] = useState([]);
   const [selectedActionCode, setSelectedActionCode] = useState("");
   const [selectedEnvironmentStage, setSelectedEnvironmentStage] = useState("D");
+  const [tableData, setTableData] = useState([
+    {
+      row_id: 1,
+      logging_object: "FLIGHT_BOOKING",
+      from_app_name: "MobileApp",
+      action_code: "S.DATABASE.LOGS",
+      client_ip: "192.168.1.100",
+      latitude: "40.7128",
+      longitude: "-74.0060",
+      user_id: "USER001",
+      trip_number: "TRIP12345",
+      device_info: "iPhone12",
+      json_request: '{"booking_id": "B123"}',
+      request_time: "2026-06-20 10:30:45",
+      response_time: "2026-06-20 10:30:50",
+      action_status: "SUCCESS",
+      failure_reason: "",
+      log_time: "2026-06-20 10:30:51"
+    },
+    {
+      row_id: 2,
+      logging_object: "FLIGHT_SEARCH",
+      from_app_name: "WebApp",
+      action_code: "S.DATABASE.LOGS",
+      client_ip: "192.168.1.101",
+      latitude: "34.0522",
+      longitude: "-118.2437",
+      user_id: "USER002",
+      trip_number: "TRIP12346",
+      device_info: "Chrome/Desktop",
+      json_request: '{"search_params": {"from": "LAX"}}',
+      request_time: "2026-06-20 10:35:20",
+      response_time: "2026-06-20 10:35:25",
+      action_status: "SUCCESS",
+      failure_reason: "",
+      log_time: "2026-06-20 10:35:26"
+    }
+  ]);
 
   const showInProgress = () => setInProgress(true);
   const hideInProgress = () => setInProgress(false);
@@ -45,7 +72,7 @@ const FlightViewApiTest = () => {
     // Fetch action codes from JSON file when component mounts
     const fetchActionCodes = async () => {
       try {
-        const response = await fetch("/data/requestFlightsPayload.json");
+        const response = await fetch("/data/requestPayload.json");
         if (!response.ok) {
           throw new Error("Failed to load action codes");
         }
@@ -68,10 +95,10 @@ const FlightViewApiTest = () => {
     setSelectedEnvironmentStage(selectedStage);
 
     if (selectedStage == "S")
-      setGatewayApiUrl(process.env.NEXT_PUBLIC_API_FLIGHTVIEW_URL_STAG);
+      setGatewayApiUrl(process.env.NEXT_PUBLIC_DBAPI_STAG_URL);
     else if (selectedStage == "P")
-      setGatewayApiUrl(process.env.NEXT_PUBLIC_API_FLIGHTVIEW_URL_PROD);
-    else setGatewayApiUrl(process.env.NEXT_PUBLIC_API_FLIGHTVIEW_URL_DEVP);
+      setGatewayApiUrl(process.env.NEXT_PUBLIC_DBAPI_PROD_URL);
+    else setGatewayApiUrl(process.env.NEXT_PUBLIC_DBAPI_DEV_URL);
   };
 
   const handleActionCodeChange = async (e) => {
@@ -97,10 +124,7 @@ const FlightViewApiTest = () => {
   };
   const preprocessJson = (jsonString) => {
     try {
-      //Parsing is not required for FlightView responses. Let's just return the jsonString as is:
-      return jsonString;
-
-      //return JSON.parse(jsonString); // Parse the raw escaped string into a JSON object
+      return JSON.parse(jsonString); // Parse the raw escaped string into a JSON object
     } catch (error) {
       console.error("Error parsing raw JSON string:", error);
       return jsonString; // Return as-is if parsing fails
@@ -108,6 +132,10 @@ const FlightViewApiTest = () => {
   };
   const beautifyJson = (jsonString) => {
     try {
+      // Handle non-string inputs
+      if (typeof jsonString !== 'string') {
+        jsonString = JSON.stringify(jsonString);
+      }
       const unescapedJson =
         selectedEnvironmentStage == "D"
           ? preprocessJson(jsonString)
@@ -115,7 +143,8 @@ const FlightViewApiTest = () => {
       return JSON.stringify(JSON.parse(unescapedJson), null, 2);
     } catch (error) {
       console.error("Error beautifying JSON:", error);
-      return jsonString; // Return raw string if parsing fails
+      // Return as string regardless of input type
+      return typeof jsonString === 'string' ? jsonString : JSON.stringify(jsonString);
     }
   };
 
@@ -147,38 +176,45 @@ const FlightViewApiTest = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate that a payload is provided
+    if (!gatewayApiRequest || gatewayApiRequest.trim() === "") {
+      setGatewayApiResponseStatus("Error");
+      setGatewayApiResponseText("Error: Please select an action code or provide a request payload");
+      return;
+    }
+
     showInProgress();
 
     try {
       let info = "";
-      // Step 1: Get an authentication token from Amazon Cognito if it's not available
-      let cognitoToken = null;
-      if (authTokenId == null) {
-        cognitoToken = await getCognitoToken(username, password);
-        setAuthTokenId(cognitoToken);
-        info = "New token generated. ";
-      } else cognitoToken = authTokenId;
 
-      // Step 2: Make a request to the AWS Lambda function using API Gateway
+      // For DBAPI, we don't use authentication tokens, we send the request directly
+      const isDBAPI = gatewayApiUrl.includes("DBAPI");
+
+      // Step 2: Make a request to DBAPI or API Gateway
       const apiResponse = await callApiGateway(
         gatewayApiUrl,
         gatewayApiRequest,
-        cognitoToken
+        isDBAPI
       );
       setGatewayApiResponseStatus(apiResponse.status);
       setRawGatewayApiResponse(apiResponse.text); // Save raw response
       setGatewayApiResponseText(beautifyJson(apiResponse.text)); // Save beautified response
 
-      if (apiResponse.status == 200)
+      const statusString = String(apiResponse.status);
+      if (statusString.includes("200"))
         info += "API response received successfully.";
-
-      if (apiResponse.status == 401) setAuthTokenId(null);
 
       setInfoLabel(info);
     } catch (error) {
       setGatewayApiResponseStatus("Error");
-      setRawGatewayApiResponse(error.message); // Save raw error
-      setGatewayApiResponseText(error.message); // Display raw error
+      let errorMsg = error.message || "Unknown error";
+      if (typeof errorMsg === 'object') {
+        errorMsg = JSON.stringify(errorMsg, null, 2);
+      }
+      setRawGatewayApiResponse(String(errorMsg));
+      setGatewayApiResponseText(String(errorMsg));
     } finally {
       hideInProgress();
     }
@@ -208,32 +244,96 @@ const FlightViewApiTest = () => {
     return response.AuthenticationResult.IdToken;
   };
 
-  const callApiGateway = async (url, requestPayload, token) => {
+  const callApiGateway = async (url, requestPayload, isDBAPI = false) => {
     try {
-      const response = await axios.post(url, requestPayload, {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        responseType: "text", // Force axios to treat the response as text
-      });
+      let data;
+      let headers;
 
-      return {
-        status: `${response.status} ${response.statusText}`,
-        text: response.data,
-      };
+      if (isDBAPI) {
+        // For DBAPI, use backend proxy at /api/dbapi
+        // Parse the JSON request payload to extract DBAPI fields
+        let dbapiPayload;
+        try {
+          dbapiPayload = typeof requestPayload === 'string' ? JSON.parse(requestPayload) : requestPayload;
+        } catch (e) {
+          // If payload can't be parsed, try to use it as default DBAPI payload
+          dbapiPayload = {
+            ActionCode: "SPAGESMENU",
+            ViewName: "VIEWPAGE",
+            ClientIP: "::1",
+            JsonReq: requestPayload,
+            Notes: "1"
+          };
+        }
+
+        // Create request for backend proxy - always use correct JsonReq structure per developer spec
+        // Extract JData from the selected payload if it exists
+        const jData = dbapiPayload.JsonReq?.JData || {};
+        const jMetaData = dbapiPayload.JsonReq?.JMetaData || {};
+        const jHeader = dbapiPayload.JsonReq?.JHeader || {};
+
+        data = {
+          ActionCode: dbapiPayload.ActionCode || 'SPAGESMENU',
+          ViewName: dbapiPayload.ViewName || dbapiPayload.PageName || 'VIEWPAGE',
+          ClientIP: dbapiPayload.ClientIP || '::1',
+          JsonReq: {
+            JHeader: {
+              ...jHeader, // Use the JHeader from payload (which has APILogin, APIPassword, etc.)
+              ViewName: dbapiPayload.ViewName || dbapiPayload.PageName || jHeader.ViewName || "VIEWPAGE",
+              ActionCode: dbapiPayload.ActionCode || jHeader.ActionCode || "SPAGESMENU",
+              RequestedURL: url,
+            },
+            JMetaData: jMetaData,
+            JData: jData,
+          },
+          Notes: dbapiPayload.Notes || "1",
+          dbapiUrl: url, // Pass the original URL
+        };
+
+        headers = {
+          "Content-Type": "application/json",
+        };
+
+        // Log what we're sending
+        console.log("Frontend sending to /api/dbapi:", data);
+
+        // Call backend proxy instead of DBAPI directly
+        const response = await axios.post("/api/dbapi", data, {
+          headers: headers,
+          responseType: "json",
+        });
+
+        return response.data; // Backend returns { status, text, success }
+      } else {
+        // Format request for API Gateway (JSON)
+        data = requestPayload;
+        headers = {
+          "Content-Type": "application/json",
+        };
+
+        const response = await axios.post(url, data, {
+          headers: headers,
+          responseType: "text",
+        });
+
+        return {
+          status: `${response.status} ${response.statusText}`,
+          text: response.data,
+        };
+      }
     } catch (error) {
       console.error(
         "Error details:",
         error.response ? error.response.data : error.message
       );
       let errMsg = error.response ? error.response.data : error.message;
-      if (error.status == 401)
-        errMsg +=
-          ". \n\nPlease retry. It will automatically generate a new token with the incoming request.";
+      // Ensure errMsg is always a string
+      if (typeof errMsg === 'object') {
+        errMsg = JSON.stringify(errMsg, null, 2);
+      }
       return {
-        status: error.status,
-        text: errMsg,
+        status: `${error.response?.status || "Error"}`,
+        text: String(errMsg),
       };
     }
   };
@@ -243,56 +343,9 @@ const FlightViewApiTest = () => {
       <h1 className={styles.heading}>Database Logs</h1>
       <div className={styles.lblLink}>
         <a href="/">Gateway API</a>
+        <Link href="/flights">FlightView API</Link>
       </div>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.formGroup}>
-          <label htmlFor="txtGatewayAPITokenId" className={styles.label}>
-            Authentication Token Id
-          </label>
-          <textarea
-            id="txtGatewayAPITokenId"
-            name="txtGatewayAPITokenId"
-            value={authTokenId}
-            readOnly
-            className={styles.textArea}
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="txtUsername" className={styles.label}>
-            Username
-          </label>
-          <input
-            type="text"
-            id="txtUsername"
-            name="txtUsername"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className={`${styles.input} ${styles.longInput}`}
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="txtPassword" className={styles.label}>
-            Password
-          </label>
-          <input
-            type="password"
-            id="txtPassword"
-            name="txtPassword"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className={`${styles.input} ${styles.longInput}`}
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <button
-            type="button"
-            name="btnGetToken"
-            onClick={getAuthToken}
-            className={styles.submitButton}
-          >
-            {gettingToken ? "Getting Token..." : "Get Token"}
-          </button>
-        </div>
         <div className={styles.formGroup}>
           <label className={styles.infolabel}>{infoLabel}</label>
         </div>
@@ -315,7 +368,7 @@ const FlightViewApiTest = () => {
 
         <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIURL" className={styles.label}>
-            FlightView API URL
+            Gateway API URL
           </label>
           <input
             type="text"
@@ -329,7 +382,7 @@ const FlightViewApiTest = () => {
 
         <div className={styles.formGroup}>
           <label htmlFor="actionCode" className={styles.label}>
-            FlightView API Request Action Code
+            Gateway API Request Action Code
           </label>
           <select
             id="actionCode"
@@ -339,20 +392,22 @@ const FlightViewApiTest = () => {
             className={`${styles.input} ${styles.longInput}`}
           >
             <option value="">Select Action Code</option>
-            {actionCodes.map((action) => (
-              <option key={action.code} value={action.code}>
-                {action.code}
-                {" ( "}
-                {action.desc}
-                {" )"}
-              </option>
-            ))}
+            {actionCodes
+              .filter((action) => action.code === "S.DATABASE.LOGS")
+              .map((action) => (
+                <option key={action.code} value={action.code}>
+                  {action.code}
+                  {" ( "}
+                  {action.desc}
+                  {" )"}
+                </option>
+              ))}
           </select>
         </div>
 
         <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIRequest" className={styles.label}>
-            FlightView API Request Payload
+            Gateway API Request Payload
           </label>
           <textarea
             id="txtGatewayAPIRequest"
@@ -376,7 +431,7 @@ const FlightViewApiTest = () => {
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIResponseStatus" className={styles.label}>
-            FlightView API Response Status
+            Gateway API Response Status
           </label>
           <input
             type="text"
@@ -388,45 +443,67 @@ const FlightViewApiTest = () => {
           />
         </div>
         <div className={styles.formGroup}>
-          <div className={styles.labelContainer}>
-            <label htmlFor="txtGatewayAPIResponseText" className={styles.label}>
-              FlightView API Response
-            </label>
-            <a
-              onClick={toggleResponseView}
-              className={styles.toggleLink}
-              style={{
-                display: gatewayApiResponseText == "" ? "none" : "block",
-              }}
-            >
-              {showRaw ? "Beautify JSON Response" : "Show Raw JSON Response"}
-            </a>
-          </div>
-
-          <textarea
-            id="txtGatewayAPIResponseText"
-            name="txtGatewayAPIResponseText"
-            value={gatewayApiResponseText}
-            readOnly
-            className={styles.textArea}
-            hidden={true}
-          />
-
-          <div style={{ position: "relative" }}>
-            {/* Copy Code Link */}
-            <span
-              onClick={handleCopy}
-              className={styles.copyCode}
-              style={{
-                display: gatewayApiResponseText == "" ? "none" : "block",
-              }}
-            >
-              {copied ? "Copied!" : "Copy Code"}
-            </span>
-            {/* Code Block */}
-            <pre>
-              <code className={styles.codeWrap}>{gatewayApiResponseText}</code>
-            </pre>
+          <label htmlFor="responsesTable" className={styles.label}>
+            Database Logs Response
+          </label>
+          <div style={{ overflowX: "auto", marginTop: "10px" }}>
+            <table style={{
+              width: "100%",
+              borderCollapse: "collapse",
+              border: "1px solid #ddd",
+              fontSize: "12px"
+            }}>
+              <thead>
+                <tr style={{ backgroundColor: "#f2f2f2" }}>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>row_id</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>logging_object</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>from_app_name</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>action_code</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>client_ip</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>Latitude</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>Longitude</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>user_id</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>trip_number</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>device_info</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>json_request</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>request_time</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>response_time</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>action_status</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>failure_reason</th>
+                  <th style={{ border: "1px solid #ddd", padding: "8px", textAlign: "left" }}>log_time</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tableData.length > 0 ? (
+                  tableData.map((row, index) => (
+                    <tr key={index}>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.row_id}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.logging_object}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.from_app_name}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.action_code}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.client_ip}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.latitude}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.longitude}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.user_id}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.trip_number}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.device_info}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px", maxWidth: "200px", wordBreak: "break-word" }}>{row.json_request}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.request_time}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.response_time}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.action_status}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.failure_reason}</td>
+                      <td style={{ border: "1px solid #ddd", padding: "8px" }}>{row.log_time}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="16" style={{ border: "1px solid #ddd", padding: "8px", textAlign: "center" }}>
+                      No data available. Make an API request to load logs.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
           </div>
         </div>
         <div className={styles.formGroup}>
@@ -446,4 +523,4 @@ const FlightViewApiTest = () => {
   );
 };
 
-export default FlightViewApiTest;
+export default GatewayApiTest;

@@ -7,8 +7,7 @@ import Link from "next/link";
 
 const FlightViewApiTest = () => {
   const [gatewayApiUrl, setGatewayApiUrl] = useState(
-    process.env.NEXT_PUBLIC_API_FLIGHTVIEW_URL_DEVP ||
-    "http://dev-dbapi.eliteny.com/Web/DBAPI/ProcessRequest"
+    process.env.NEXT_PUBLIC_API_FLIGHTVIEW_URL_DEVP
   );
   const [gatewayApiRequest, setGatewayApiRequest] = useState();
   const [gatewayApiRequestNotes, setGatewayApiRequestNotes] = useState();
@@ -96,14 +95,22 @@ const FlightViewApiTest = () => {
   };
   const beautifyJson = (jsonString) => {
     try {
+      // Handle if input is already an object
+      let jsonToProcess = typeof jsonString === 'string'
+        ? jsonString
+        : JSON.stringify(jsonString, null, 2);
+
       const unescapedJson =
         selectedEnvironmentStage == "D"
-          ? preprocessJson(jsonString)
-          : jsonString;
+          ? preprocessJson(jsonToProcess)
+          : jsonToProcess;
       return JSON.stringify(JSON.parse(unescapedJson), null, 2);
     } catch (error) {
       console.error("Error beautifying JSON:", error);
-      return jsonString; // Return raw string if parsing fails
+      // Return as formatted string regardless of input type
+      return typeof jsonString === 'string'
+        ? jsonString
+        : JSON.stringify(jsonString, null, 2);
     }
   };
 
@@ -128,9 +135,13 @@ const FlightViewApiTest = () => {
       );
 
       setGatewayApiResponseStatus(apiResponse.status);
-      setRawGatewayApiResponse(apiResponse.text);
+      // Ensure raw response is always a string
+      const rawResponse = typeof apiResponse.text === 'string'
+        ? apiResponse.text
+        : JSON.stringify(apiResponse.text, null, 2);
+      setRawGatewayApiResponse(rawResponse);
       setGatewayApiResponseText(
-        beautifyJson(apiResponse.text)
+        beautifyJson(rawResponse)
       );
 
       setInfoLabel("API response received successfully.");
@@ -151,10 +162,10 @@ const FlightViewApiTest = () => {
           : requestPayload;
 
       const response = await axios.post(
-        "/api/dbapi",
+        "/api/flightview",
         {
-          ...payload,
-          dbapiUrl: url,
+          flightViewUrl: url,
+          JsonReq: payload.JsonReq ?? payload,
         },
         {
           headers: {
@@ -165,8 +176,7 @@ const FlightViewApiTest = () => {
 
       return response.data;
     } catch (error) {
-      let errMsg =
-        error.response?.data || error.message;
+      let errMsg = error.response?.data || error.message;
 
       if (typeof errMsg === "object") {
         errMsg = JSON.stringify(errMsg, null, 2);
@@ -178,6 +188,7 @@ const FlightViewApiTest = () => {
       };
     }
   };
+
 
   return (
     <div className={styles.container}>

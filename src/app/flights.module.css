@@ -29,6 +29,7 @@
   display: block;
   color: #555;
 }
+
 .infolabel {
 
   margin-bottom: 5px;
@@ -40,8 +41,7 @@
 
 .input,
 .textArea,
-.textAreaSmall 
-{
+.textAreaSmall {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -55,9 +55,11 @@
 .textArea {
   height: 130px;
 }
+
 .textAreaSmall {
   height: 50px;
 }
+
 .readOnlyInput {
   background-color: #f9f9f9;
 }
@@ -75,22 +77,27 @@
 .submitButton:hover {
   background-color: #005bb5;
 }
+
 .lblLink {
   margin-bottom: 10px;
-  font-size:small;
+  font-size: small;
   text-decoration: underline;
   color: red;
   text-align: center;
   width: 100vw;
-  padding-right:50px;
-  border:0px;
+  padding-right: 50px;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
+
 .copyCode {
   cursor: pointer;
   position: absolute;
   top: 5px;
   right: 10px;
-  bottom:10px;
+  bottom: 10px;
   color: #4c4c4c;
   font-size: 12px;
   text-decoration: underline;
@@ -99,11 +106,13 @@
 .copyCode:hover {
   color: #a14208;
 }
+
 .codeWrap {
 
   white-space: pre-wrap;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
+
 .labelContainer {
   display: flex;
   justify-content: space-between;
@@ -111,12 +120,14 @@
 }
 
 .toggleLink {
-  color: #0070f3; /* Link color */
+  color: #0070f3;
+  /* Link color */
   cursor: pointer;
   font-size: 12px;
   text-decoration: underline;
 }
 
 .toggleLink:hover {
-  color: #089cf8; /* Hover color */
+  color: #089cf8;
+  /* Hover color */
 }

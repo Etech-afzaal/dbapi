@@ -1,10 +1,10 @@
 [
     {
-        "code": "S.APP.INFO",
-        "desc": "Fetches welcome screen images and text",
+        "code": "S.DATABASE.LOGS",
+        "desc": "Fetches Database logs",
         "notes": "",
         "payload": {
-            "ActionCode": "S.APP.INFO",
+            "ActionCode": "S.DATABASE.LOGS",
             "ViewName": "LOGIN",
             "ClientIP": "72.255.40.37",
             "JsonReq": {
@@ -35,7 +35,7 @@
             },
             "Notes": "Test Notes ..."
         }
-    },
+    },  
     {
         "code": "S.USER",
         "desc": "Verifies user credentials and returns user's profile",
