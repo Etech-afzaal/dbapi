@@ -1,10 +1,10 @@
 [
     {
-        "code": "S.DATABASE.LOGS",
+        "code": "S.GETDBLOGS",
         "desc": "Fetches Database logs",
         "notes": "",
         "payload": {
-            "ActionCode": "S.DATABASE.LOGS",
+            "ActionCode": "S.GETDBLOGS",
             "ViewName": "LOGIN",
             "ClientIP": "72.255.40.37",
             "JsonReq": {
