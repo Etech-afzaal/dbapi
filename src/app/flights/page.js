@@ -280,6 +280,15 @@ const FlightViewApiTest = () => {
           />
         </div>
         <div className={styles.formGroup}>
+          <button
+            type="submit"
+            name="btnSubmit"
+            className={styles.submitButton}
+          >
+            {inProgress ? "Making Request..." : "Make API Request"}
+          </button>
+        </div>
+        <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIResponseStatus" className={styles.label}>
             FlightView API Response Status
           </label>
@@ -333,15 +342,6 @@ const FlightViewApiTest = () => {
               <code className={styles.codeWrap}>{gatewayApiResponseText}</code>
             </pre>
           </div>
-        </div>
-        <div className={styles.formGroup}>
-          <button
-            type="submit"
-            name="btnSubmit"
-            className={styles.submitButton}
-          >
-            {inProgress ? "Making Request..." : "Make API Request"}
-          </button>
         </div>
         <div className={styles.lblLink}>
           <Link href="mailto:kazimbukhari@gmail.com">Report Issues</Link>
