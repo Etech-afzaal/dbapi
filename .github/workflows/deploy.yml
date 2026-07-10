@@ -15,9 +15,9 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd ~/dbapi
+            cd /home/ec2-user/postman.eliteny/dbapi
             git fetch origin
             git reset --hard origin/main
             npm install
             npm run build
-            pm2 restart next-app
+            pm2 restart postman.eliteny.com
