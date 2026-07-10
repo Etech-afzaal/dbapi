@@ -1,0 +1,377 @@
+.container {
+  max-width: 11366px;
+  margin: 0 auto;
+  padding: 20px 20px 0px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+  color: #555;
+}
+
+.infolabel {
+
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+  color: red;
+  text-align: center;
+}
+
+.input,
+.textArea,
+.textAreaSmall {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.longInput {
+  width: 100%;
+}
+
+.textArea {
+  height: 130px;
+}
+
+.textAreaSmall {
+  height: 50px;
+}
+
+.readOnlyInput {
+  background-color: #f9f9f9;
+}
+
+.submitButton {
+  padding: 10px 15px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submitButton:hover {
+  background-color: #005bb5;
+}
+
+.lblLink {
+  margin-bottom: 35px;
+  font-size: small;
+  text-decoration: underline;
+  color: red;
+  text-align: center;
+  width: 100vw;
+  padding-right: 50px;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.copyCode {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  bottom: 10px;
+  color: #4c4c4c;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.copyCode:hover {
+  color: #a14208;
+}
+
+.codeWrap {
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center;*/
+}
+
+.toggleLink {
+  color: #0070f3;
+  /* Link color */
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.toggleLink:hover {
+  color: #089cf8;
+  /* Hover color */
+}
+
+.buttonRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.clearButton {
+  padding: 10px 15px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.filterRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.field {
+  flex: 1;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.buttonWrapper .submitButton {
+  height: 42px;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+   .field {
+    width: 100%;
+    flex: none;
+  }
+}
+
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+}
+
+.table {
+  table-layout: fixed;
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.table th {
+  background: #1e3a8a;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+}
+
+.table td {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table th[data-col="LOG_ID"],
+.table td[data-col="LOG_ID"] {
+  width: 80px;
+  max-width: 80px;
+}
+
+.table th[data-col="ACTION_TIME"],
+.table td[data-col="ACTION_TIME"] {
+  width: 130px;
+  max-width: 130px;
+}
+
+.table th[data-col="ACTION_CODE"],
+.table td[data-col="ACTION_CODE"] {
+  width: 180px;
+  max-width: 180px;
+}
+
+.table th[data-col="PARAMS"],
+.table td[data-col="PARAMS"] {
+  width: 300px;
+  max-width: 300px;
+  white-space: pre-wrap;
+}
+
+.table th[data-col="RESPONSE"],
+.table td[data-col="RESPONSE"] {
+  width: 300px;
+  max-width: 300px;
+  white-space: pre-wrap;
+}
+.seeMoreButton {
+  margin-left: 8px;
+  border: none;
+  background: none;
+  color: #1e3a8a;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modalBox {
+  background: #fff;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modalHeader {
+  padding: 14px 18px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modalHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.copyButton {
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.closeButton {
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modalContent {
+  padding: 18px;
+  margin: 0;
+  max-height: 65vh;
+  overflow: auto;
+  white-space: pre-wrap;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+}
+
+.paramsPreview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.previewText {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.seeMoreButton {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.clickableRow {
+  cursor: pointer;
+}
+
+.clickableRow:hover {
+  background: #eef5ff;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.detailCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fff;
+}
+
+.detailCard strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e3a8a;
+}
+
+.detailCard pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+}
+.datePickerWrapper {
+  width: 100%;
+}
