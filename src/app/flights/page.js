@@ -26,6 +26,7 @@ const FlightViewApiTest = () => {
   const hideInProgress = () => setInProgress(false);
 
   const [copied, setCopied] = useState(false);
+  const [requestCopied, setRequestCopied] = useState(false);
 
   useEffect(() => {
     // Fetch action codes from JSON file when component mounts
@@ -61,40 +62,50 @@ const FlightViewApiTest = () => {
     if (selectedAction) {
       setGatewayApiRequest(JSON.stringify(selectedAction.payload, null, 2));
       setGatewayApiRequestNotes(selectedAction.notes);
+    } else {
+      setGatewayApiRequest("");
+      setGatewayApiRequestNotes("");
     }
+
+    // Clear response fields
+    setGatewayApiResponseStatus("");
+    setGatewayApiResponseText("");
+    setRawGatewayApiResponse("");
+    setInfoLabel("");
+    setShowRaw(false);
   };
 
-   const toggleResponseView = () => {
-  const nextShowRaw = !showRaw;
-  setShowRaw(nextShowRaw);
+  const toggleResponseView = () => {
+    const nextShowRaw = !showRaw;
+    setShowRaw(nextShowRaw);
 
-  setGatewayApiResponseText(
-    nextShowRaw
-      ? String(rawGatewayApiResponse)
-      : beautifyJson(rawGatewayApiResponse)
-  );
-};
+    setGatewayApiResponseText(
+      nextShowRaw
+        ? String(rawGatewayApiResponse)
+        : beautifyJson(rawGatewayApiResponse)
+    );
+  };
 
   const beautifyJson = (value) => {
-  try {
-    let json = value;
+    try {
+      let json = value;
 
-    // Parse repeatedly while response is still a JSON string
-    while (typeof json === "string") {
-      const parsed = JSON.parse(json);
+      // Parse repeatedly while response is still a JSON string
+      while (typeof json === "string") {
+        const parsed = JSON.parse(json);
 
-      // Stop if parsing does not change the value
-      if (parsed === json) break;
+        // Stop if parsing does not change the value
+        if (parsed === json) break;
 
-      json = parsed;
+        json = parsed;
+      }
+
+      return JSON.stringify(json, null, 2);
+    } catch (error) {
+      console.error("Error beautifying JSON:", error);
+      return typeof value === "string" ? value : JSON.stringify(value, null, 2);
     }
-
-    return JSON.stringify(json, null, 2);
-  } catch (error) {
-    console.error("Error beautifying JSON:", error);
-    return typeof value === "string" ? value : JSON.stringify(value, null, 2);
-  }
-};
+  };
 
   const handleCopy = () => {
     navigator.clipboard
@@ -105,16 +116,26 @@ const FlightViewApiTest = () => {
       })
       .catch((err) => console.error("Failed to copy: ", err));
   };
-const handleClear = () => {
-  setSelectedActionCode("");
-  setGatewayApiRequest("");
-  setGatewayApiRequestNotes("");
-  setGatewayApiResponseStatus("");
-  setGatewayApiResponseText("");
-  setRawGatewayApiResponse("");
-  setInfoLabel("");
-  setShowRaw(false);
-};
+
+  const handleCopyRequest = () => {
+    navigator.clipboard
+      .writeText(gatewayApiRequest)
+      .then(() => {
+        setRequestCopied(true);
+        setTimeout(() => setRequestCopied(false), 2000); // Reset copied status after 2 seconds
+      })
+      .catch((err) => console.error("Failed to copy: ", err));
+  };
+  const handleClear = () => {
+    setSelectedActionCode("");
+    setGatewayApiRequest("");
+    setGatewayApiRequestNotes("");
+    setGatewayApiResponseStatus("");
+    setGatewayApiResponseText("");
+    setRawGatewayApiResponse("");
+    setInfoLabel("");
+    setShowRaw(false);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     showInProgress();
@@ -127,8 +148,8 @@ const handleClear = () => {
 
       setGatewayApiResponseStatus(apiResponse.status);
       // Ensure raw response is always a string
-      const rawResponse = typeof apiResponse.text === 'string' 
-        ? apiResponse.text 
+      const rawResponse = typeof apiResponse.text === 'string'
+        ? apiResponse.text
         : JSON.stringify(apiResponse.text, null, 2);
       setRawGatewayApiResponse(rawResponse);
       setGatewayApiResponseText(
@@ -145,40 +166,40 @@ const handleClear = () => {
     }
   };
 
-const callApiGateway = async (url, requestPayload) => {
-  try {
-    const payload =
-      typeof requestPayload === "string"
-        ? JSON.parse(requestPayload)
-        : requestPayload;
+  const callApiGateway = async (url, requestPayload) => {
+    try {
+      const payload =
+        typeof requestPayload === "string"
+          ? JSON.parse(requestPayload)
+          : requestPayload;
 
-    const response = await axios.post(
-      "/api/flightview",
-      {
-        flightViewUrl: url,
-        JsonReq: payload.JsonReq ?? payload,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
+      const response = await axios.post(
+        "/api/flightview",
+        {
+          flightViewUrl: url,
+          JsonReq: payload.JsonReq ?? payload,
         },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      return response.data;
+    } catch (error) {
+      let errMsg = error.response?.data || error.message;
+
+      if (typeof errMsg === "object") {
+        errMsg = JSON.stringify(errMsg, null, 2);
       }
-    );
 
-    return response.data;
-  } catch (error) {
-    let errMsg = error.response?.data || error.message;
-
-    if (typeof errMsg === "object") {
-      errMsg = JSON.stringify(errMsg, null, 2);
+      return {
+        status: "Error",
+        text: errMsg,
+      };
     }
-
-    return {
-      status: "Error",
-      text: errMsg,
-    };
-  }
-};
+  };
 
   return (
     <div className={styles.container}>
@@ -219,13 +240,25 @@ const callApiGateway = async (url, requestPayload) => {
           <label htmlFor="txtGatewayAPIRequest" className={styles.label}>
             FlightView API Request Payload
           </label>
-          <textarea
-            id="txtGatewayAPIRequest"
-            name="txtGatewayAPIRequest"
-            value={gatewayApiRequest}
-            onChange={(e) => setGatewayApiRequest(e.target.value)}
-            className={styles.textArea}
-          />
+          <div style={{ position: "relative" }}>
+            <span
+              onClick={handleCopyRequest}
+              className={styles.copyCode}
+              style={{
+                display: gatewayApiRequest ? "block" : "none",
+                bottom: "auto"
+              }}
+            >
+              {requestCopied ? "Copied!" : "Copy Code"}
+            </span>
+            <textarea
+              id="txtGatewayAPIRequest"
+              name="txtGatewayAPIRequest"
+              value={gatewayApiRequest}
+              onChange={(e) => setGatewayApiRequest(e.target.value)}
+              className={styles.textArea}
+            />
+          </div>
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIRequest" className={styles.label}>
@@ -239,28 +272,28 @@ const callApiGateway = async (url, requestPayload) => {
             className={styles.textAreaSmall}
           />
         </div>
-         <div className={styles.formGroup}>
-  <div className={styles.buttonRow}>
-    <button
-      type="submit"
-      name="btnSubmit"
-      className={styles.submitButton}
-    >
-      {inProgress ? "Making Request..." : "Make API Request"}
-    </button>
+        <div className={styles.formGroup}>
+          <div className={styles.buttonRow}>
+            <button
+              type="submit"
+              name="btnSubmit"
+              className={styles.submitButton}
+            >
+              {inProgress ? "Making Request..." : "Make API Request"}
+            </button>
 
-    {gatewayApiResponseText && (
-      <button
-        type="button"
-        onClick={handleClear}
-        className={styles.clearButton}
-      >
-        Clear Input Fields
-      </button>
-    )}
-  </div>
+            {gatewayApiResponseText && (
+              <button
+                type="button"
+                onClick={handleClear}
+                className={styles.clearButton}
+              >
+                Reset Input Fields
+              </button>
+            )}
+          </div>
         </div>
-       
+
         <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIResponseStatus" className={styles.label}>
             FlightView API Response Status

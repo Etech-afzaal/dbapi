@@ -26,6 +26,7 @@ const GatewayApiTest = () => {
   const hideInProgress = () => setInProgress(false);
 
   const [copied, setCopied] = useState(false);
+  const [requestCopied, setRequestCopied] = useState(false);
 
   useEffect(() => {
     // Fetch action codes from JSON file when component mounts
@@ -61,39 +62,49 @@ const GatewayApiTest = () => {
     if (selectedAction) {
       setGatewayApiRequest(JSON.stringify(selectedAction.payload, null, 2));
       setGatewayApiRequestNotes(selectedAction.notes);
+    } else {
+      setGatewayApiRequest("");
+      setGatewayApiRequestNotes("");
     }
+
+    // Clear response fields
+    setGatewayApiResponseStatus("");
+    setGatewayApiResponseText("");
+    setRawGatewayApiResponse("");
+    setInfoLabel("");
+    setShowRaw(false);
   };
 
   const toggleResponseView = () => {
-  const nextShowRaw = !showRaw;
-  setShowRaw(nextShowRaw);
+    const nextShowRaw = !showRaw;
+    setShowRaw(nextShowRaw);
 
-  setGatewayApiResponseText(
-    nextShowRaw
-      ? String(rawGatewayApiResponse)
-      : beautifyJson(rawGatewayApiResponse)
-  );
-};
+    setGatewayApiResponseText(
+      nextShowRaw
+        ? String(rawGatewayApiResponse)
+        : beautifyJson(rawGatewayApiResponse)
+    );
+  };
   const beautifyJson = (value) => {
-  try {
-    let json = value;
+    try {
+      let json = value;
 
-    // Parse repeatedly while response is still a JSON string
-    while (typeof json === "string") {
-      const parsed = JSON.parse(json);
+      // Parse repeatedly while response is still a JSON string
+      while (typeof json === "string") {
+        const parsed = JSON.parse(json);
 
-      // Stop if parsing does not change the value
-      if (parsed === json) break;
+        // Stop if parsing does not change the value
+        if (parsed === json) break;
 
-      json = parsed;
+        json = parsed;
+      }
+
+      return JSON.stringify(json, null, 2);
+    } catch (error) {
+      console.error("Error beautifying JSON:", error);
+      return typeof value === "string" ? value : JSON.stringify(value, null, 2);
     }
-
-    return JSON.stringify(json, null, 2);
-  } catch (error) {
-    console.error("Error beautifying JSON:", error);
-    return typeof value === "string" ? value : JSON.stringify(value, null, 2);
-  }
-};
+  };
 
   const handleCopy = () => {
     navigator.clipboard
@@ -105,16 +116,25 @@ const GatewayApiTest = () => {
       .catch((err) => console.error("Failed to copy: ", err));
   };
 
-const handleClear = () => {
-  setSelectedActionCode("");
-  setGatewayApiRequest("");
-  setGatewayApiRequestNotes("");
-  setGatewayApiResponseStatus("");
-  setGatewayApiResponseText("");
-  setRawGatewayApiResponse("");
-  setInfoLabel("");
-  setShowRaw(false);
-};
+  const handleCopyRequest = () => {
+    navigator.clipboard
+      .writeText(gatewayApiRequest)
+      .then(() => {
+        setRequestCopied(true);
+        setTimeout(() => setRequestCopied(false), 2000); // Reset copied status after 2 seconds
+      })
+      .catch((err) => console.error("Failed to copy: ", err));
+  };
+
+  const handleClear = () => {
+    setGatewayApiRequest("");
+    setGatewayApiRequestNotes("");
+    setGatewayApiResponseStatus("");
+    setGatewayApiResponseText("");
+    setRawGatewayApiResponse("");
+    setInfoLabel("");
+    setShowRaw(false);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -129,13 +149,13 @@ const handleClear = () => {
     showInProgress();
 
     try {
-      let info = ""; 
+      let info = "";
 
       // Step 2: Make a request to DBAPI or API Gateway
       const apiResponse = await callDBAPI(
-                                          gatewayApiUrl,
-                                          gatewayApiRequest
-                                        );
+        gatewayApiUrl,
+        gatewayApiRequest
+      );
       setGatewayApiResponseStatus(apiResponse.status);
       setRawGatewayApiResponse(apiResponse.text); // Save raw response
       setGatewayApiResponseText(beautifyJson(apiResponse.text)); // Save beautified response
@@ -158,57 +178,57 @@ const handleClear = () => {
     }
   };
 
- const callDBAPI = async (url, requestPayload) => {
-  try {
-    let dbapiPayload =
-      typeof requestPayload === "string"
-        ? JSON.parse(requestPayload)
-        : requestPayload;
+  const callDBAPI = async (url, requestPayload) => {
+    try {
+      let dbapiPayload =
+        typeof requestPayload === "string"
+          ? JSON.parse(requestPayload)
+          : requestPayload;
 
-    const jData = dbapiPayload.JsonReq?.JData || {};
-    const jMetaData = dbapiPayload.JsonReq?.JMetaData || {};
-    const jHeader = dbapiPayload.JsonReq?.JHeader || {};
+      const jData = dbapiPayload.JsonReq?.JData || {};
+      const jMetaData = dbapiPayload.JsonReq?.JMetaData || {};
+      const jHeader = dbapiPayload.JsonReq?.JHeader || {};
 
-    const data = {
-      ActionCode: dbapiPayload.ActionCode,
-      ViewName: dbapiPayload.ViewName,
-      ClientIP: dbapiPayload.ClientIP,
-      JsonReq: {
-        JHeader: {
-          ...jHeader,
-          ViewName: dbapiPayload.ViewName || jHeader.ViewName,
-          ActionCode: dbapiPayload.ActionCode || jHeader.ActionCode,
-          RequestedURL: url,
+      const data = {
+        ActionCode: dbapiPayload.ActionCode,
+        ViewName: dbapiPayload.ViewName,
+        ClientIP: dbapiPayload.ClientIP,
+        JsonReq: {
+          JHeader: {
+            ...jHeader,
+            ViewName: dbapiPayload.ViewName || jHeader.ViewName,
+            ActionCode: dbapiPayload.ActionCode || jHeader.ActionCode,
+            RequestedURL: url,
+          },
+          JMetaData: jMetaData,
+          JData: jData,
         },
-        JMetaData: jMetaData,
-        JData: jData,
-      },
-      Notes: dbapiPayload.Notes || "1",
-      dbapiUrl: url,
-    };
+        Notes: dbapiPayload.Notes || "1",
+        dbapiUrl: url,
+      };
 
-    const response = await axios.post("/api/dbapi", data, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      responseType: "json",
-    });
+      const response = await axios.post("/api/dbapi", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        responseType: "json",
+      });
 
-    return response.data;
-  } catch (error) {
-    let errMsg = error.response ? error.response.data : error.message;
+      return response.data;
+    } catch (error) {
+      let errMsg = error.response ? error.response.data : error.message;
 
-    if (typeof errMsg === "object") {
-      errMsg = JSON.stringify(errMsg, null, 2);
+      if (typeof errMsg === "object") {
+        errMsg = JSON.stringify(errMsg, null, 2);
+      }
+
+      return {
+        status: `${error.response?.status || "Error"}`,
+        text: String(errMsg),
+        success: false,
+      };
     }
-
-    return {
-      status: `${error.response?.status || "Error"}`,
-      text: String(errMsg),
-      success: false,
-    };
-  }
-};
+  };
 
   return (
     <div className={styles.container}>
@@ -249,13 +269,25 @@ const handleClear = () => {
           <label htmlFor="txtGatewayAPIRequest" className={styles.label}>
             Gateway API Request Payload
           </label>
-          <textarea
-            id="txtGatewayAPIRequest"
-            name="txtGatewayAPIRequest"
-            value={gatewayApiRequest}
-            onChange={(e) => setGatewayApiRequest(e.target.value)}
-            className={styles.textArea}
-          />
+          <div style={{ position: "relative" }}>
+            <span
+              onClick={handleCopyRequest}
+              className={styles.copyCode}
+              style={{
+                display: gatewayApiRequest ? "block" : "none",
+                bottom: "auto"
+              }}
+            >
+              {requestCopied ? "Copied!" : "Copy Code"}
+            </span>
+            <textarea
+              id="txtGatewayAPIRequest"
+              name="txtGatewayAPIRequest"
+              value={gatewayApiRequest}
+              onChange={(e) => setGatewayApiRequest(e.target.value)}
+              className={styles.textArea}
+            />
+          </div>
         </div>
         <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIRequest" className={styles.label}>
@@ -269,29 +301,29 @@ const handleClear = () => {
             className={styles.textAreaSmall}
           />
         </div>
-        
-        <div className={styles.formGroup}>
-  <div className={styles.buttonRow}>
-    <button
-      type="submit"
-      name="btnSubmit"
-      className={styles.submitButton}
-    >
-      {inProgress ? "Making Request..." : "Make API Request"}
-    </button>
 
-    {gatewayApiResponseText && (
-      <button
-        type="button"
-        onClick={handleClear}
-        className={styles.clearButton}
-      >
-        Clear Input Fields
-      </button>
-    )}
-  </div>
+        <div className={styles.formGroup}>
+          <div className={styles.buttonRow}>
+            <button
+              type="submit"
+              name="btnSubmit"
+              className={styles.submitButton}
+            >
+              {inProgress ? "Making Request..." : "Make API Request"}
+            </button>
+
+            {gatewayApiResponseText && (
+              <button
+                type="button"
+                onClick={handleClear}
+                className={styles.clearButton}
+              >
+                Reset Input Fields
+              </button>
+            )}
+          </div>
         </div>
-       
+
         <div className={styles.formGroup}>
           <label htmlFor="txtGatewayAPIResponseStatus" className={styles.label}>
             Gateway API Response Status
