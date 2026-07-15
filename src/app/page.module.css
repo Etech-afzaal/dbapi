@@ -66,7 +66,7 @@
 
 .submitButton {
   padding: 10px 15px;
-  background-color: #00f349;
+  background-color: #0070f3;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -96,8 +96,8 @@
 .copyCode {
   cursor: pointer;
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 15px;
+  right: 30px;
   bottom: 10px;
   color: #4c4c4c;
   font-size: 12px;
@@ -150,4 +150,3 @@
   text-align: center;
   margin-bottom: 25px;
 }
-
