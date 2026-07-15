@@ -309,7 +309,7 @@ const GatewayApiTest = () => {
               name="btnSubmit"
               className={styles.submitButton}
             >
-              {inProgress ? "Making Request..." : "Make API Request"}
+              {inProgress ? "Making Request..." : "Make API Request!"}
             </button>
 
             {gatewayApiResponseText && (
