@@ -232,7 +232,7 @@ const GatewayApiTest = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>DBAPI Test1</h1>
+      <h1 className={styles.heading}>DBAPI Test</h1>
       <div className={styles.lblLink}>
         <Link href="/flights">FlightView API</Link>
         <Link href="/database_logs">View Database Logs</Link>
