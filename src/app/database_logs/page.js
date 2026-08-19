@@ -49,8 +49,8 @@ const DatabaseViewer = () => {
 
         const sorted = Array.isArray(data)
           ? data
-              .slice()
-              .sort((a, b) => (a.code || "").localeCompare(b.code || ""))
+            .slice()
+            .sort((a, b) => (a.code || "").localeCompare(b.code || ""))
           : data;
 
         setActionCodes(sorted);
@@ -335,7 +335,7 @@ const DatabaseViewer = () => {
       <h1 className={styles.heading}>Database Logs Viewer</h1>
 
       <div className={styles.lblLink}>
-        <Link href="/">DBAPI</Link>
+        <Link href="/">DBGateKeeper</Link>
         <Link href="/flights">Flightview API</Link>
       </div>
 
@@ -448,7 +448,7 @@ const DatabaseViewer = () => {
                       >
                         {(column.key === "PARAMS" ||
                           column.key === "RESPONSE") &&
-                        row[column.index] ? (
+                          row[column.index] ? (
                           <div className={styles.paramsPreview}>
                             <span className={styles.previewText}>
                               {formatCellValue(row[column.index])}
