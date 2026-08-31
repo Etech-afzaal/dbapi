@@ -254,6 +254,7 @@ const GatewayApiTest = () => {
             className={`${styles.input} ${styles.longInput}`}
           >
             <option value="">Select Action Code</option>
+            <option value="custom">Custom Action Code</option>
             {actionCodes.map((action) => (
               <option key={action.code} value={action.code}>
                 {action.code}
