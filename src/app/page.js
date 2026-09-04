@@ -232,7 +232,8 @@ const GatewayApiTest = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>DBGateKeeper</h1>
+      <h1 className={styles.heading}>Elite Postman</h1>
+      <p className={styles.sub_heading}>DB-Gatekeeper Test client</p>
       <div className={styles.lblLink}>
         <Link href="/flights">FlightView API</Link>
         <Link href="/database_logs">View Database Logs</Link>

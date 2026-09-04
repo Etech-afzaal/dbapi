@@ -335,7 +335,7 @@ const DatabaseViewer = () => {
       <h1 className={styles.heading}>Database Logs Viewer</h1>
 
       <div className={styles.lblLink}>
-        <Link href="/">DBGateKeeper</Link>
+        <Link href="/">Elite Postman</Link>
         <Link href="/flights">Flightview API</Link>
       </div>
 
