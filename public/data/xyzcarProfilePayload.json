@@ -1,0 +1,640 @@
+[
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.CHECK_LOGIN_CREDENTIALS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_PASSWORD": "<<J.LEE_PASSWORD>>"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.IS_UNIQUE_EMAIL",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.IS_VALID_COMPANY_NAME",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_ACCOUNT_NUM": "99005",
+            "p_COMPANY_NAME": "XYZ99005"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.PASSWORD",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.U.PASSWORD",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_OLD_PASSWORD": "12456",
+            "p_NEW_PASSWORD": "112233"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.I.PROFILE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "r.patel.qa1029@xyzcar.com",
+            "p_PASSWORD": "Ride2026!",
+            "p_CONFIRM_PASSWORD": "Ride2026!",
+            "p_FIRST_NAME": "Ravi",
+            "p_LAST_NAME": "Patel",
+            "p_PHONE_NUMBER": "",
+            "p_PHONE_EXT": "",
+            "p_PHONE_NUMBER_US": "2125550147",
+            "p_PHONE_EXT_US": "12",
+            "p_FAX": "",
+            "p_COUNTRY": "01",
+            "p_STATE": "NY",
+            "p_CITY": "New York",
+            "p_ZIP": "10019",
+            "p_BUILDING_NUM": "245",
+            "p_STREET_NAME": "W 52ND ST",
+            "p_CROSS_STREET1": "BROADWAY",
+            "p_CROSS_STREET2": "8TH AVE",
+            "p_ADDRESS_PHONE": "",
+            "p_ADDRESS_PHONE_US": "2125550147",
+            "p_ADDRESS_TYPE": "HOME",
+            "p_PAYMENT_TYPE": "1",
+            "p_ACCOUNT_NUM": "99005",
+            "p_VIP_NUM": "",
+            "p_CC_TYPE": "",
+            "p_CARD_HOLDER_NAME": "",
+            "p_CARD_NUMBER": "",
+            "p_VERIFY_CODE": "",
+            "p_CC_MONTH": "",
+            "p_CC_YEAR": "",
+            "p_ACCOUNT_REQ1": "",
+            "p_ACCOUNT_REQ2": "",
+            "p_ACCOUNT_REQ3": "",
+            "p_ACCOUNT_REQ4": "",
+            "p_CONFIRMATION_METHOD": "ML",
+            "p_PREFERRED_FLEET": "",
+            "p_CAR_YEAR": "90",
+            "p_CAR_PHONE": "N",
+            "p_SPECIAL_OFFER": "N",
+            "p_SMOKING_CAR": "N",
+            "p_IVR_PIN": ""
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.U.PROFILE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_PASSWORD": "99005",
+            "p_FIRST_NAME": "Jordan",
+            "p_LAST_NAME": "Lee",
+            "p_PHONE_NUMBER": "",
+            "p_PHONE_EXT": "",
+            "p_PHONE_NUMBER_US": "2125550134",
+            "p_PHONE_EXT_US": "12",
+            "p_FAX": "",
+            "p_COUNTRY": "01",
+            "p_STATE": "NY",
+            "p_CITY": "New York",
+            "p_ZIP": "10019",
+            "p_BUILDING_NUM": "245",
+            "p_STREET_NAME": "W 52ND ST",
+            "p_CROSS_STREET1": "BROADWAY",
+            "p_CROSS_STREET2": "8TH AVE",
+            "p_ADDRESS_PHONE": "",
+            "p_ADDRESS_PHONE_US": "2125550134",
+            "p_ADDRESS_TYPE": "HOME",
+            "p_PAYMENT_TYPE": "1",
+            "p_CC_TYPE": "",
+            "p_CARD_HOLDER_NAME": "",
+            "p_CARD_NUMBER": "",
+            "p_VERIFY_CODE": "",
+            "p_CC_MONTH": "12",
+            "p_CC_YEAR": "28",
+            "p_ACCOUNT_REQ1": "",
+            "p_ACCOUNT_REQ2": "",
+            "p_ACCOUNT_REQ3": "",
+            "p_ACCOUNT_REQ4": "",
+            "p_CONFIRMATION_METHOD": "",
+            "p_PREFERRED_FLEET": "",
+            "p_CAR_YEAR": "90",
+            "p_CAR_PHONE": "N",
+            "p_SPECIAL_OFFER": "N",
+            "p_SMOKING_CAR": "N",
+            "p_IVR_PIN": ""
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.LOAD_PROFILE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.ACCOUNT_REQUIREMENTS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_ACCOUNT_NUM": "99005"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.ACCOUNT_REQUIREMENTS_RS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_ACCOUNT_NUM": "99005"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.USER_ADDRESSES",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.I.USER_ADDRESS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_COUNTRY": "01",
+            "p_STATE": "NY",
+            "p_CITY": "New York",
+            "p_STREET_NUM": "245",
+            "p_STREET_NAME": "W 52ND ST",
+            "p_CROSS_STREET": "BROADWAY",
+            "p_PICKUP_POINT": "MAIN ENTRANCE",
+            "p_ZIP": "10019",
+            "p_DIRECTIONS": "LOBBY",
+            "p_PHONE_NUM": "",
+            "p_EXT": "",
+            "p_PHONE_NUM_US": "2125550147",
+            "p_EXT_US": "12"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.U.USER_ADDRESS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_PICKUP_COUNT": "' || l_pickupCount || '",
+            "p_COUNTRY": "01",
+            "p_STATE": "NY",
+            "p_CITY": "New York",
+            "p_STREET_NUM": "245",
+            "p_STREET_NAME": "W 52ND ST",
+            "p_CROSS_STREET": "8TH AVE",
+            "p_PICKUP_POINT": "MAIN ENTRANCE",
+            "p_ZIP": "10019",
+            "p_DIRECTIONS": "SIDE DOOR",
+            "p_PHONE_NUM": "",
+            "p_EXT": "",
+            "p_PHONE_NUM_US": "2125550147",
+            "p_EXT_US": "12"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.D.USER_ADDRESS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_PICKUP_COUNT": "' || l_pickupCount || '"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.IS_VALID_VIP",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_ACCOUNT_NUM": "99005",
+            "p_VIP_NUM": "9990000001"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.ACCOUNT_VIP_NUM",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.BLOCKED_DRIVERS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.CAR_INFO",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_CAR_NUM": "412"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.I.BLOCKED_DRIVER",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_CAR_NUM": "412"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.D.BLOCKED_DRIVER",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_CAR_NUM": "412"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.I.ACCESS_RIGHTS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID_FROM": "j.lee@xyzcar.com",
+            "p_LOGIN_ID_TO": "' || l_loginTo || '",
+            "p_PHONE": "2125550147",
+            "p_EXTENSION": "12"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.D.ACCESS_RIGHTS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID_FROM": "j.lee@xyzcar.com",
+            "p_LOGIN_ID_TO": "' || l_loginTo || '",
+            "p_PHONE": "2125550147",
+            "p_EXTENSION": "12"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.MATCHING_PROFILE_LIST",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_FIRST_NAME": "Jennifer",
+            "p_LAST_NAME": "Lee",
+            "p_PHONE": "",
+            "p_PHONE_EXTENSION": ""
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.GRANT_ACCESS_RIGHTS_TO_ALL",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID_FROM": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.U.GRANT_ACCESS_RIGHTS_TO_ALL",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID_FROM": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.U.REVOKE_ACCESS_RIGHTS_TO_ALL",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID_FROM": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.ACCESS_RIGHTS_GRANTED_PROFILE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID_FROM": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.PROFILE_WHO_GRANTED_ACCESS",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID_TO": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.PROFILE_COLUMN_VALUES",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.PROFILE_COLUMN_VALUES_BY_TYPE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_COLUMN_ID": "6"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.I.PROFILE_COLUMN_VALUE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_COLUMN_ID": "6",
+            "p_COLUMN_VALUE": "2125550147-12"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.U.PROFILE_COLUMN_VALUE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_COLUMN_ID": "6",
+            "p_COLUMN_VALUE_OLD": "2125550147-12",
+            "p_COLUMN_VALUE_NEW": "2125550148-12"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.D.PROFILE_COLUMN_VALUE",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com",
+            "p_COLUMN_ID": "6",
+            "p_COLUMN_VALUE": "2125550148-12"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.USER_PROFILE_ADDRESSES",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_LOGIN_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.I.DB_LOG_ERROR",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_MESS_TEXT": "Profile module test run",
+            "p_ERROR_CODE": "TEST-001",
+            "p_PROC_NAME": "XYZ_REQUEST_HANDLER.Actions",
+            "p_DEBUG_LEVEL": "1",
+            "p_USER_ID": "j.lee@xyzcar.com"
+        }
+    },
+    {
+        "JHeader": {
+            "ActionCode": "PROF.S.CORPORATE_ADDRESSES",
+            "APILogin": "xyzapp@xyz.com",
+            "APIPassword": "12345",
+            "RequestedURL": "http://domain.com/XYZAPI/ProcessRequest",
+            "Source": "XYZWebApp",
+            "Target": "XYZAPI"
+        },
+        "JMetaData": {},
+        "JData": {
+            "p_ACCOUNT_NUM": "99005"
+        }
+    }
+]

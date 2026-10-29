@@ -207,6 +207,7 @@ const FlightViewApiTest = () => {
       <div className={styles.lblLink}>
         <a href="/">Elite Postman</a>
         <Link href="/xyzcar-postman">XYZCar Postman</Link>
+        <Link href="/xyzcar-profle-module">XYZCar Profile Module</Link>
         <Link href="/database_logs">View Database Logs</Link>
       </div>
       <form onSubmit={handleSubmit} className={styles.form}>
