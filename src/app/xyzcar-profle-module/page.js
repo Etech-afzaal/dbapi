@@ -244,7 +244,7 @@ const GatewayApiTest = () => {
       <div className={styles.lblLink}>
         <Link href="/">Elite Postman</Link>
         <Link href="/flights">FlightView API</Link>
-        <Link href="/xyzcar-postman">XYZCar Postman</Link>
+        <Link href="/xyzcar-res-mobule">XYZCar Reservation Module</Link>
         <Link href="/database_logs">View Database Logs</Link>
       </div>
       <form onSubmit={handleSubmit} className={styles.form}>

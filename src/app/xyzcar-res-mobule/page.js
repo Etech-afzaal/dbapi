@@ -239,7 +239,7 @@ const GatewayApiTest = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>XYZCar Postman</h1>
+      <h1 className={styles.heading}>XYZCar Reservation Module</h1>
       <p className={styles.sub_heading}>XYZCar Reservation API Test Client</p>
       <div className={styles.lblLink}>
         <Link href="/">Elite Postman</Link>
