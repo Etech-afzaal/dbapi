@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const GatewayApiTest = () => {
   const [gatewayApiUrl, setGatewayApiUrl] = useState(
-    process.env.NEXT_PUBLIC_DBAPI_DEV_URL
+    process.env.NEXT_PUBLIC_DBAPI_DEV_URL,
   );
   const [gatewayApiRequest, setGatewayApiRequest] = useState();
   const [gatewayApiRequestNotes, setGatewayApiRequestNotes] = useState();
@@ -39,7 +39,9 @@ const GatewayApiTest = () => {
         const data = await response.json();
         // Sort action codes alphabetically by code before setting state
         const sorted = Array.isArray(data)
-          ? data.slice().sort((a, b) => (a.code || "").localeCompare(b.code || ""))
+          ? data
+              .slice()
+              .sort((a, b) => (a.code || "").localeCompare(b.code || ""))
           : data;
         setActionCodes(sorted);
       } catch (error) {
@@ -56,7 +58,7 @@ const GatewayApiTest = () => {
 
     // Find selected action code data
     const selectedAction = actionCodes.find(
-      (action) => action.code === selectedCode
+      (action) => action.code === selectedCode,
     );
 
     if (selectedAction) {
@@ -82,7 +84,7 @@ const GatewayApiTest = () => {
     setGatewayApiResponseText(
       nextShowRaw
         ? String(rawGatewayApiResponse)
-        : beautifyJson(rawGatewayApiResponse)
+        : beautifyJson(rawGatewayApiResponse),
     );
   };
   const beautifyJson = (value) => {
@@ -142,7 +144,9 @@ const GatewayApiTest = () => {
     // Validate that a payload is provided
     if (!gatewayApiRequest || gatewayApiRequest.trim() === "") {
       setGatewayApiResponseStatus("Error");
-      setGatewayApiResponseText("Error: Please select an action code or provide a request payload");
+      setGatewayApiResponseText(
+        "Error: Please select an action code or provide a request payload",
+      );
       return;
     }
 
@@ -152,10 +156,7 @@ const GatewayApiTest = () => {
       let info = "";
 
       // Step 2: Make a request to DBAPI or API Gateway
-      const apiResponse = await callDBAPI(
-        gatewayApiUrl,
-        gatewayApiRequest
-      );
+      const apiResponse = await callDBAPI(gatewayApiUrl, gatewayApiRequest);
       setGatewayApiResponseStatus(apiResponse.status);
       setRawGatewayApiResponse(apiResponse.text); // Save raw response
       setGatewayApiResponseText(beautifyJson(apiResponse.text)); // Save beautified response
@@ -168,7 +169,7 @@ const GatewayApiTest = () => {
     } catch (error) {
       setGatewayApiResponseStatus("Error");
       let errorMsg = error.message || "Unknown error";
-      if (typeof errorMsg === 'object') {
+      if (typeof errorMsg === "object") {
         errorMsg = JSON.stringify(errorMsg, null, 2);
       }
       setRawGatewayApiResponse(String(errorMsg));
@@ -233,7 +234,7 @@ const GatewayApiTest = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>Elite Postman</h1>
-      <p className={styles.sub_heading}>DB-Gatekeeper Test client</p>
+      <p className={styles.sub_heading}>DB-Gatekeeper Test client_1</p>
       <div className={styles.lblLink}>
         <Link href="/flights">FlightView API</Link>
         <Link href="/xyzcar-postman">XYZCar Postman</Link>
@@ -278,7 +279,7 @@ const GatewayApiTest = () => {
               className={styles.copyCode}
               style={{
                 display: gatewayApiRequest ? "block" : "none",
-                bottom: "auto"
+                bottom: "auto",
               }}
             >
               {requestCopied ? "Copied!" : "Copy Code"}
