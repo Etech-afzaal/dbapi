@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import styles from "../flights.module.css";
 import axios from "axios";
 import Link from "next/link";
+import DashboardNav from "../DashboardNav";
 
 const FlightViewApiTest = () => {
   const [gatewayApiUrl, setGatewayApiUrl] = useState(
@@ -204,12 +205,8 @@ const FlightViewApiTest = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>FlightView API Test</h1>
-      <div className={styles.lblLink}>
-        <a href="/">Elite Postman</a>
-        <Link href="/xyzcar-res-mobule">XYZCar Reservation Module</Link>
-        <Link href="/xyzcar-profle-module">XYZCar Profile Module</Link>
-        <Link href="/database_logs">View Database Logs</Link>
-      </div>
+      <p className={styles.sub_heading}>FlightView API Test Client</p>
+      <DashboardNav />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formGroup}>
           <label className={styles.infolabel}>{infoLabel}</label>

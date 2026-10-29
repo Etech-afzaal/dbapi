@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import axios from "axios";
 import Link from "next/link";
 import { jsonrepair } from "jsonrepair";
+import DashboardNav from "../DashboardNav";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -333,14 +334,8 @@ const DatabaseViewer = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>Database Logs Viewer</h1>
-
-      <div className={styles.lblLink}>
-        <Link href="/">Elite Postman</Link>
-        <Link href="/flights">Flightview API</Link>
-        <Link href="/xyzcar-res-mobule">XYZCar Reservation Module</Link>
-        <Link href="/xyzcar-profle-module">XYZCar Profile Module</Link>
-      </div>
-
+      <p className={styles.sub_heading}>View and search database request logs</p>
+      <DashboardNav />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.filterRow}>
           <div className={styles.field}>

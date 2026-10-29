@@ -11,6 +11,12 @@
 .heading {
   text-align: center;
   color: #333;
+  margin-bottom: 0;
+}
+
+.sub_heading {
+  text-align: center;
+  color: #462d2d;
   margin-bottom: 10px;
 }
 
