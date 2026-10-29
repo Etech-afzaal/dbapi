@@ -1,0 +1,576 @@
+[
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.I.RESERVATION",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_FIRST_NAME":  "TEST_FIRST_NAME",
+                      "p_LAST_NAME":  "TEST_LAST_NAME",
+                      "p_RESERVATION_DATE":  "11/15/2026",
+                      "p_RESERVATION_TIME":  "10:30",
+                      "p_PU_TYPE":  "1",
+                      "p_PU_COUNTRY":  "US",
+                      "p_PU_STATE":  "NY",
+                      "p_PU_CITY":  "New York",
+                      "p_PU_ZIP_CODE":  "10001",
+                      "p_PU_STREET_NUMBER":  "1",
+                      "p_PU_STREET_NAME":  "TEST_P_S_N",
+                      "p_PU_CROSS_STREET":  "TEST_P_C_S",
+                      "p_PU_CROSS_STREET2":  "TEST_P_C_S2",
+                      "p_PU_POINT":  "TEST_P_P",
+                      "p_PU_DIRECTIONS":  "TEST_P_D",
+                      "p_PU_ADDRESS_ADD":  "N",
+                      "p_PU_AIRPORT_NAME":  "TEST_P_A_N",
+                      "p_PU_AIRLINE_NAME":  "TEST_P_A_N",
+                      "p_PU_FLIGHT_NUMBER":  "1",
+                      "p_PU_FLIGHT_ARRIVING_FROM":  "TEST_P_F_A_F",
+                      "p_PU_AIRPORT_OPTION":  "A",
+                      "p_PU_LANDMARK_NAME":  "TEST_P_L_N",
+                      "p_DO_TYPE":  "1",
+                      "p_DO_COUNTRY":  "US",
+                      "p_DO_STATE":  "NY",
+                      "p_DO_CITY":  "New York",
+                      "p_DO_ZIP_CODE":  "10001",
+                      "p_DO_STREET_NUMBER":  "1",
+                      "p_DO_STREET_NAME":  "TEST_D_S_N",
+                      "p_DO_CROSS_STREET":  "TEST_D_C_S",
+                      "p_DO_CROSS_STREET2":  "TEST_D_C_S",
+                      "p_DO_DIRECTIONS":  "TEST_D_D",
+                      "p_DO_ADDRESS_ADD":  "N",
+                      "p_DO_AIRPORT_NAME":  "TEST_D_A_N",
+                      "p_DO_AIRLINE_NAME":  "TEST_D_A_N",
+                      "p_DO_FLIGHT_NUMBER":  "1",
+                      "p_DO_TERMINAL_NUMBER":  "1",
+                      "p_DO_FLIGHT_DESTINATION_CITY":  "New York",
+                      "p_DO_LANDMARK_NAME":  "TEST_D_L_N",
+                      "p_PAYMENT_METHOD":  "1",
+                      "p_ACCOUNT_NUMBER":  "99005",
+                      "p_ACCOUNT_REQUIREMENT1":  "",
+                      "p_ACCOUNT_REQUIREMENT2":  "",
+                      "p_ACCOUNT_REQUIREMENT3":  "",
+                      "p_ACCOUNT_REQUIREMENT4":  "",
+                      "p_CARD_TYPE":  "",
+                      "p_CARD_HOLDER_NAME":  "",
+                      "p_CARD_NUMBER":  "",
+                      "p_VERIFY_CODE":  "",
+                      "p_EXPIRATION_DATE":  "",
+                      "p_APPROVAL_NUM":  "1",
+                      "p_FLEET_NAME":  "TEST_F_N",
+                      "p_CONFIRMATION_METHOD":  "ML",
+                      "p_PHONE_NUMBER":  "",
+                      "p_PHONE_EXT":  "",
+                      "p_PHONE_NUMBER_US":  "",
+                      "p_PHONE_EXT_US":  "",
+                      "p_EMAIL":  "j.lee@xyzcar.com",
+                      "p_NEED_PHONE":  "N",
+                      "p_CAR_TYPE":  "",
+                      "p_CAR_YEAR":  "",
+                      "p_NUMBER_OF_PASSENGERS":  "1",
+                      "p_NUMBER_OF_STOPS":  "1",
+                      "p_SMOKING_ALLOWED":  "N",
+                      "p_CALL_SOURCE":  "W",
+                      "p_RESERVATION_MAKE_FOR":  "TEST_R_M_F",
+                      "p_RIDE_PURPOSE":  "TEST_R_P",
+                      "p_CC_EMAIL":  "etech.sarmad@gmail.com",
+                      "p_LOGIN_ID_RESERVATION_MAKE_FOR":  "j.lee@xyzcar.com",
+                      "p_BILLING_ZIP_CODE":  "10001",
+                      "p_PICKUP_LAT":  "40.7484",
+                      "p_PICKUP_LON":  "-73.9857",
+                      "p_DROPOFF_LAT":  "40.7484",
+                      "p_DROPOFF_LON":  "-73.9857",
+                      "p_PICKUP_ZONE_NUM":  "1",
+                      "p_DROPOFF_ZONE_NUM":  "1"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.ALL_ORDERS",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_DATE_FROM":  "01-01-2026",
+                      "p_DATE_TO":  "10-26-2026"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.U.RESERVATION",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_RESERVATION_NUM":  "W6102831258",
+                      "p_FIRST_NAME":  "Jennifer",
+                      "p_LAST_NAME":  "Lee",
+                      "p_RESERVATION_DATE":  "11/20/2026",
+                      "p_RESERVATION_TIME":  "11:35 AM",
+                      "p_PU_TYPE":  "1",
+                      "p_PU_COUNTRY":  "US",
+                      "p_PU_STATE":  "NY",
+                      "p_PU_CITY":  "New York",
+                      "p_PU_ZIP_CODE":  "10001",
+                      "p_PU_STREET_NUMBER":  "1",
+                      "p_PU_STREET_NAME":  "TEST_PU_STREET_NAME",
+                      "p_PU_CROSS_STREET":  "TEST_PU_CROSS_STREET",
+                      "p_PU_CROSS_STREET2":  "TEST_PU_CROSS_STREET2",
+                      "p_PU_POINT":  "TEST_PU_POINT",
+                      "p_PU_DIRECTIONS":  "TEST_PU_DIRECTIONS",
+                      "p_PU_ADDRESS_ADD":  "N",
+                      "p_PU_AIRPORT_NAME":  "",
+                      "p_PU_AIRLINE_NAME":  "",
+                      "p_PU_FLIGHT_NUMBER":  "",
+                      "p_PU_FLIGHT_ARRIVING_FROM":  "",
+                      "p_PU_AIRPORT_OPTION":  "",
+                      "p_PU_LANDMARK_NAME":  "",
+                      "p_DO_TYPE":  "1",
+                      "p_DO_COUNTRY":  "US",
+                      "p_DO_STATE":  "NY",
+                      "p_DO_CITY":  "New York",
+                      "p_DO_ZIP_CODE":  "10001",
+                      "p_DO_STREET_NUMBER":  "1",
+                      "p_DO_STREET_NAME":  "TEST_DO_STREET_NAME",
+                      "p_DO_CROSS_STREET":  "TEST_DO_CROSS_STREET",
+                      "p_DO_CROSS_STREET2":  "TEST_DO_CROSS_STREET2",
+                      "p_DO_DIRECTIONS":  "TEST_DO_DIRECTIONS",
+                      "p_DO_ADDRESS_ADD":  "N",
+                      "p_DO_AIRPORT_NAME":  "",
+                      "p_DO_AIRLINE_NAME":  "",
+                      "p_DO_FLIGHT_NUMBER":  "",
+                      "p_DO_TERMINAL_NUMBER":  "",
+                      "p_DO_FLIGHT_DESTINATION_CITY":  "",
+                      "p_DO_LANDMARK_NAME":  "",
+                      "p_PAYMENT_METHOD":  "1",
+                      "p_ACCOUNT_NUMBER":  "99005",
+                      "p_ACCOUNT_REQUIREMENT1":  "",
+                      "p_ACCOUNT_REQUIREMENT2":  "",
+                      "p_ACCOUNT_REQUIREMENT3":  "",
+                      "p_ACCOUNT_REQUIREMENT4":  "",
+                      "p_CARD_TYPE":  "",
+                      "p_CARD_HOLDER_NAME":  "",
+                      "p_CARD_NUMBER":  "",
+                      "p_VERIFY_CODE":  "",
+                      "p_EXPIRATION_DATE":  "",
+                      "p_APPROVAL_NUM":  "",
+                      "p_FLEET_NAME":  "",
+                      "p_CONFIRMATION_METHOD":  "ML",
+                      "p_PHONE_NUMBER":  "",
+                      "p_PHONE_EXT":  "",
+                      "p_PHONE_NUMBER_US":  "2125550100",
+                      "p_PHONE_EXT_US":  "",
+                      "p_EMAIL":  "j.lee@xyzcar.com",
+                      "p_NEED_PHONE":  "N",
+                      "p_CAR_TYPE":  "",
+                      "p_CAR_YEAR":  "",
+                      "p_NUMBER_OF_PASSENGERS":  "2",
+                      "p_NUMBER_OF_STOPS":  "1",
+                      "p_SMOKING_ALLOWED":  "N",
+                      "p_RESERVATION_MAKE_FOR":  "TEST_R_M_F",
+                      "p_RESERVATION_MAKE_FOR_OLD":  "TEST_R_M_F",
+                      "p_RIDE_PURPOSE":  "TEST_R_P_UPD",
+                      "p_RIDE_PURPOSE_OLD":  "TEST_R_P",
+                      "p_CC_EMAIL":  "etech.sarmad@gmail.com",
+                      "p_CC_EMAIL_OLD":  "etech.sarmad@gmail.com",
+                      "p_LOGIN_ID_RESERVATION_MAKE_FOR":  "j.lee@xyzcar.com",
+                      "p_LOGIN_ID_RESERVATION_MAKE_FOR_OLD":  "j.lee@xyzcar.com",
+                      "p_BILLING_ZIP_CODE":  "10001",
+                      "p_PICKUP_LAT":  "40.7484",
+                      "p_PICKUP_LON":  "-73.9857",
+                      "p_DROPOFF_LAT":  "40.7484",
+                      "p_DROPOFF_LON":  "-73.9857",
+                      "p_PICKUP_ZONE_NUM":  "1",
+                      "p_DROPOFF_ZONE_NUM":  "1"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.U.CANCEL_RESERVATION",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_RESERVATION_NUM":  "NDBG454",
+                      "p_CANCEL_REASON":  "TEST_CANCEL_REASON"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.LOAD_RESERVATION",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_RESERVATION_NUM":  "W5121607812"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.UPDATABLE_ORDERS",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.I.CREDIT_CARD_APPROVAL",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_CARD_TYPE":  "0",
+                      "p_CARD_HOLDER_NAME":  "TEST_CARD_HOLDER_NAME",
+                      "p_CARD_NUMBER":  "1",
+                      "p_EXPIRATION_DATE":  "11-2027",
+                      "p_VERIFY_CODE":  "TEST_VERIFY_CODE"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.CREDIT_CARD_APPROVAL",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_REQUEST_NUM":  "753371"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.IS_CREDIT_CARD_SPECIFIC_ACCOUNT",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_ACCOUNT_NUM":  "24600"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.I.ASKED_QUESTIONS",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_RESERVATION_NUM":  "W5121607812",
+                      "p_QUESTION_ID":  "3",
+                      "p_ADDITIONAL_MESSAGE":  "Test question."
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.BILLING_METHOD",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_ACCOUNT_NUM":  "24600"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.GOOGLE_ZONE_NUM",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LAT":  "40.7484",
+                      "p_LON":  "-73.9857",
+                      "p_ZIP":  "10001"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.LOAD_RESERVATION_COLUMN_SINGLE_VALUE",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_RESERVATION_NUM":  "W5121607812",
+                      "p_COLUMN_ID":  "1"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.LOAD_RESERVATION_COLUMN_VALUES_BY_TYPE",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_RESERVATION_NUM":  "W5121607812",
+                      "p_COLUMN_ID":  "1"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.I.RESERVATION_COLUMN_VALUE",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_RESERVATION_NUM":  "W5121607812",
+                      "p_COLUMN_ID":  "1",
+                      "p_COLUMN_VALUE":  "TEST_COLUMN_VALUE"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.U.RESERVATION_COLUMN_VALUE",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_RESERVATION_NUM":  "W5121607812",
+                      "p_COLUMN_ID":  "1",
+                      "p_COLUMN_VALUE_OLD":  "TEST_COLUMN_VALUE",
+                      "p_COLUMN_VALUE_NEW":  "TEST_COLUMN_VALUE_UPDATED"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.D.RESERVATION_COLUMN_VALUE",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_RESERVATION_NUM":  "W5121607812",
+                      "p_COLUMN_ID":  "1",
+                      "p_COLUMN_VALUE":  "TEST_COLUMN_VALUE_UPDATED"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.LATITUDE_LONGITUDE_FOR_CAR",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_CAR_NUM":  "412"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.VEHICLE_LOG",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_RESERVATION_NUM":  "W5121607812"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.ACCOUNT_REQUIREMENTS_LIST",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_ACCOUNT_NUM":  "29311",
+                      "p_REQUIREMENT_NUM":  "1"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.VEHICLE_TYPE",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.ZONE_THE_LOCATION",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_STREET_NUM":  "1",
+                      "p_STREET_NAME":  "WADSWORTH AVE",
+                      "p_CITY_NAME":  "MANHATTAN",
+                      "p_COUNTY_NAME":  "TEST_COUNTY_NAME",
+                      "p_STATE_NAME":  "LC",
+                      "p_AIRPORT_NAME":  "TEST_AIRPORT_NAME",
+                      "p_LANDMARK_NAME":  "TEST_LANDMARK_NAME",
+                      "p_PU_DO_TYPE":  "TEST_PU_DO_TYPE"
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.ALL_PREDEFINED_QUESTIONS",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+
+                  }
+    },
+    {
+        "JHeader":  {
+                        "ActionCode":  "RES.S.COMMUNICATION_LOG",
+                        "APILogin":  "xyzapp@xyz.com",
+                        "APIPassword":  "12345",
+                        "RequestedURL":  "http://domain.com/XYZAPI/ProcessRequest",
+                        "Source":  "XYZWebApp",
+                        "Target":  "XYZAPI"
+                    },
+        "JMetaData":  {
+
+                      },
+        "JData":  {
+                      "p_LOGIN_ID":  "j.lee@xyzcar.com",
+                      "p_RESERVATION_NUM":  "W5121607812"
+                  }
+    }
+]
