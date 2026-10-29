@@ -8,7 +8,7 @@ const items = [
   { href: "/", label: "Elite Postman", icon: "document" },
   { href: "/flights", label: "FlightView API", icon: "plane" },
   { href: "/database_logs", label: "View Database Logs", icon: "database" },
-  { href: "/xyzcar-res-mobule", label: "XYZCar Reservation Module", icon: "person" },
+  { href: "/xyzcar-res-module", label: "XYZCar Reservation Module", icon: "person" },
   { href: "/xyzcar-profle-module", label: "XYZCar Profile Module", icon: "person" },
 ];
 
