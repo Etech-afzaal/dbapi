@@ -338,6 +338,7 @@ const DatabaseViewer = () => {
         <Link href="/">Elite Postman</Link>
         <Link href="/flights">Flightview API</Link>
         <Link href="/xyzcar-postman">XYZCar Postman</Link>
+        <Link href="/xyzcar-profle-module">XYZCar Profile Module</Link>
       </div>
 
       <form onSubmit={handleSubmit} className={styles.form}>
