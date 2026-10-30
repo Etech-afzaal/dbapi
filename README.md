@@ -9,3 +9,9 @@ Leverages REACT or Next.js for a modern and performant user interface.
 
 **DBAPI Integration:**
 Designed to seamlessly interact with ASP.NET API
+
+git add .
+git commit -m "Updated project"
+
+git push origin main
+git push second main

@@ -1,5 +1,5 @@
 .container {
-  max-width: 11366px;
+  width: min(100%, 1440px);
   margin: 0 auto;
   padding: 20px 20px 0px 20px;
   border: 1px solid #ccc;
@@ -91,8 +91,8 @@
   text-decoration: underline;
   color: red;
   text-align: center;
-  width: 100vw;
-  padding-right: 50px;
+  width: 100%;
+  padding-right: 0;
   border: 0px;
   display: flex;
   justify-content: center;
@@ -141,8 +141,23 @@
 
 .buttonRow {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 20px 16px; }
+  .heading { font-size: clamp(1.6rem, 5vw, 2rem); }
+  .labelContainer { gap: 12px; flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 16px 12px; }
+  .sub_heading { font-size: 0.9rem; }
+  .buttonRow { align-items: stretch; flex-direction: column; gap: 0; }
+  .submitButton, .clearButton { width: 100%; }
+  .lblLink { flex-wrap: wrap; }
 }
 
 .clearButton {

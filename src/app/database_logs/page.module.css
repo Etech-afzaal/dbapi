@@ -1,5 +1,5 @@
 .container {
-  max-width: 11366px;
+  width: min(100%, 1440px);
   margin: 0 auto;
   padding: 20px 20px 0px 20px;
   border: 1px solid #ccc;
@@ -90,8 +90,8 @@
   text-decoration: underline;
   color: red;
   text-align: center;
-  width: 100vw;
-  padding-right: 50px;
+  width: 100%;
+  padding-right: 0;
   border: 0px;
   display: flex;
   justify-content: center;
@@ -164,7 +164,8 @@
 }
 
 .field {
-  flex: 1;
+  flex: 1 1 180px;
+  min-width: 0;
 }
 
 .buttonWrapper {
@@ -276,7 +277,7 @@
 
 .modalBox {
   background: #fff;
-  width: 80%;
+  width: min(100%, 900px);
   max-width: 900px;
   max-height: 80vh;
   border-radius: 8px;
@@ -380,4 +381,20 @@
 }
 .datePickerWrapper {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 20px 16px; }
+  .heading { font-size: clamp(1.6rem, 5vw, 2rem); }
+  .modalHeader { gap: 10px; flex-wrap: wrap; }
+  .modalHeaderActions { gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 16px 12px; }
+  .sub_heading { font-size: 0.9rem; }
+  .buttonWrapper, .buttonWrapper .submitButton { width: 100%; }
+  .modalOverlay { padding: 10px; }
+  .modalContent { padding: 12px; }
+  .lblLink { flex-wrap: wrap; }
 }

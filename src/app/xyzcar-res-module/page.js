@@ -30,22 +30,32 @@ const GatewayApiTest = () => {
   const [requestCopied, setRequestCopied] = useState(false);
 
   useEffect(() => {
-    // Fetch action codes from JSON file when component mounts
+    // Load both XYZCar modules into one action-code dropdown.
     const fetchActionCodes = async () => {
       try {
-        const response = await fetch("/data/xyzCarResPayload.json");
-        if (!response.ok) {
+        const [reservationResponse, profileResponse] = await Promise.all([
+          fetch("/data/xyzCarResPayload.json"),
+          fetch("/data/xyzcarProfilePayload.json"),
+        ]);
+        if (!reservationResponse.ok || !profileResponse.ok) {
           throw new Error("Failed to load action codes");
         }
-        const data = await response.json();
-        const mapped = Array.isArray(data)
-          ? data.map((payload, index) => ({
-              code: payload.JHeader?.ActionCode || `XYZCAR-${index + 1}`,
-              desc: "",
+        const [reservations, profiles] = await Promise.all([
+          reservationResponse.json(),
+          profileResponse.json(),
+        ]);
+        const mapped = [
+          ...reservations.map((payload) => ({
+              code: payload.JHeader.ActionCode,
               payload,
-              notes: `Dynamic SQL test ${index + 1}: ${payload.JHeader?.ActionCode || "XYZCAR"}`,
-            }))
-          : [];
+              notes: `Reservation: ${payload.JHeader.ActionCode}`,
+          })),
+          ...profiles.map((payload) => ({
+              code: payload.JHeader.ActionCode,
+              payload,
+              notes: `Profile: ${payload.JHeader.ActionCode}`,
+          })),
+        ].sort((a, b) => a.code.localeCompare(b.code));
         setActionCodes(mapped);
       } catch (error) {
         console.error("Error fetching action codes:", error);
@@ -240,8 +250,8 @@ const GatewayApiTest = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>XYZCar Reservation Module</h1>
-      <p className={styles.sub_heading}>XYZCar Reservation API Test Client</p>
+      <h1 className={styles.heading}>XYZCar Postman</h1>
+      <p className={styles.sub_heading}>XYZCar Reservation and Profile API Test Client</p>
       <DashboardNav />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formGroup}>

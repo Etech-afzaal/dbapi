@@ -1,0 +1,18 @@
+.home, .page { width: min(100%, 1440px); margin: 0 auto; padding: 30px 20px; }
+.home { max-width: 1080px; padding-top: 64px; }
+.shimmer { background: linear-gradient(90deg, #e8eef5 25%, #f6f9fc 50%, #e8eef5 75%); background-size: 200% 100%; animation: shine 1.4s ease-in-out infinite; border-radius: 8px; }
+.title { width: min(45%, 340px); height: 38px; margin: 0 auto 14px; }
+.subtitle { width: min(55%, 420px); height: 20px; margin: 0 auto 24px; }
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 30px; }
+.card { height: 280px; border-radius: 12px; }
+.tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+.tab { width: 175px; height: 42px; }
+.panel { border: 1px solid #e1e8f0; border-radius: 10px; background: #fff; padding: 26px; }
+.label { width: min(45%, 240px); height: 20px; margin-bottom: 10px; }
+.field { width: 100%; height: 44px; margin-bottom: 26px; }
+.textarea { width: 100%; height: 130px; margin-bottom: 26px; }
+.button { width: 160px; height: 42px; }
+@keyframes shine { to { background-position-x: -200%; } }
+@media (max-width: 768px) { .cards { grid-template-columns: 1fr; gap: 20px; } .card { height: 220px; } .page, .home { padding: 24px 16px; } }
+@media (max-width: 480px) { .page, .home { padding: 18px 12px; } .panel { padding: 16px; } .tab { flex: 1 1 130px; } .title { width: 70%; } .subtitle { width: 80%; } }
+@media (prefers-reduced-motion: reduce) { .shimmer { animation: none; } }
