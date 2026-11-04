@@ -50,7 +50,7 @@ export const GatewayApiTest = ({
 
               return {
                 code: actionCode,
-                desc: `${header.client || "BlinkRide"} ${viewName}`,
+                desc: "",
                 notes: "BlinkRide",
                 payload: {
                   ActionCode: actionCode,
@@ -287,9 +287,7 @@ export const GatewayApiTest = ({
             {actionCodes.map((action) => (
               <option key={action.code} value={action.code}>
                 {action.code}
-                {" ( "}
-                {action.desc}
-                {" )"}
+                {action.desc ? ` - ${action.desc}` : ""}
               </option>
             ))}
           </select>
