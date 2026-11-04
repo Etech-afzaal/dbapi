@@ -6,7 +6,11 @@ import axios from "axios";
 import Link from "next/link";
 import DashboardNav from "../DashboardNav";
 
-const GatewayApiTest = () => {
+export const GatewayApiTest = ({
+  payloadUrl = "/data/requestPayload.json",
+  heading = "Elite Postman",
+  subheading = "DB-Gatekeeper Test client",
+}) => {
   const [gatewayApiUrl, setGatewayApiUrl] = useState(
     process.env.NEXT_PUBLIC_DBAPI_DEV_URL,
   );
@@ -33,17 +37,42 @@ const GatewayApiTest = () => {
     // Fetch action codes from JSON file when component mounts
     const fetchActionCodes = async () => {
       try {
-        const response = await fetch("/data/requestPayload.json");
+        const response = await fetch(payloadUrl);
         if (!response.ok) {
           throw new Error("Failed to load action codes");
         }
         const data = await response.json();
+        const normalizedData = Array.isArray(data) && data.every((item) => item?.jData?.P_ACTION_CODE)
+          ? data.map((item) => {
+              const header = item.jHeader || {};
+              const actionCode = item.jData.P_ACTION_CODE;
+              const viewName = header.viewName || header.ViewName || "LOGIN";
+
+              return {
+                code: actionCode,
+                desc: `${header.client || "BlinkRide"} ${viewName}`,
+                notes: "BlinkRide",
+                payload: {
+                  ActionCode: actionCode,
+                  ViewName: viewName,
+                  ClientIP: header.clientIP || header.ClientIP || "::1",
+                  JsonReq: {
+                    JHeader: header,
+                    JMetaData: item.jMetaData || item.JMetaData || {},
+                    JData: item.jData,
+                  },
+                  Notes: "BlinkRide",
+                },
+              };
+            })
+          : data;
+
         // Sort action codes alphabetically by code before setting state
-        const sorted = Array.isArray(data)
-          ? data
+        const sorted = Array.isArray(normalizedData)
+          ? normalizedData
               .slice()
               .sort((a, b) => (a.code || "").localeCompare(b.code || ""))
-          : data;
+          : normalizedData;
         setActionCodes(sorted);
       } catch (error) {
         console.error("Error fetching action codes:", error);
@@ -51,7 +80,7 @@ const GatewayApiTest = () => {
     };
 
     fetchActionCodes();
-  }, []);
+  }, [payloadUrl]);
 
   const handleActionCodeChange = async (e) => {
     const selectedCode = e.target.value;
@@ -234,8 +263,8 @@ const GatewayApiTest = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Elite Postman</h1>
-      <p className={styles.sub_heading}>DB-Gatekeeper Test client</p>
+      <h1 className={styles.heading}>{heading}</h1>
+      <p className={styles.sub_heading}>{subheading}</p>
       <DashboardNav />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formGroup}>

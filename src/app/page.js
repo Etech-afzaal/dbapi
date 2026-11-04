@@ -21,6 +21,15 @@ export default function Home() {
             <span className={styles.disabled} aria-disabled="true">View Database Logs</span>
           </div>
         </section>
+        <section className={styles.card} aria-labelledby="blinkride-title">
+          <h2 id="blinkride-title">BlinkRide</h2>
+          <div className={styles.links}>
+            <Link href="/blinkride/driver-native">BR Driver Native App</Link>
+            <Link href="/blinkride/io-web-portal">BR IO Web Portal</Link>
+            <Link href="/blinkride/customer-app">BR Customer App</Link>
+            <span className={styles.disabled} aria-disabled="true">View Database Logs</span>
+          </div>
+        </section>
       </div>
     </main>
   );
