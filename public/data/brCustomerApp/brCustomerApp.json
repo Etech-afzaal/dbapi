@@ -9,7 +9,907 @@
             "Target": "BRAPI",
             "deviceType": "Mobile",
             "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.40.37",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.TRIP_QUICK_ACTIONS",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_ID": "NY101"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "TRP.U.DESTINATION",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_ID": "TR0709",
+            "P_DROPOFF_ADDRESS_TYPE": "STREET",
+            "P_DROPOFF_FULL_ADDRESS": "CHUNGI AMARSADHU",
+            "P_DROPOFF_LATITUDE": 40.7069,
+            "P_DROPOFF_LONGITUDE": -74.0113
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.GRATUITY",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_NUMBER": "0515-1234",
+            "P_GRATUITY_AMOUNT": 8.3
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.STOP_CHARGES",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_NUMBER": "0515-1234",
+            "P_AUTHORIZED": "YES",
+            "P_STOPS": [
+                {
+                    "address": "State Library, 328 Swanston St, Melbourne VIC 3000",
+                    "lat": -37.8098,
+                    "lng": 144.9652,
+                    "wait_time": 10
+                },
+                {
+                    "address": "Winton Place, Melbourne VIC 3000",
+                    "lat": -37.8126,
+                    "lng": 144.9631,
+                    "wait_time": 5
+                }
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.STOPS",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_NUMBER": "52I61E",
+            "P_AUTHORIZED": "YES",
+            "P_STOPS": [
+                {
+                    "address": "Dr. Hostpital Johar Town",
+                    "lat": -37.8098,
+                    "lng": 144.9652,
+                    "wait_time": 10
+                },
+                {
+                    "address": "Punjab University",
+                    "lat": -37.8126,
+                    "lng": 144.9631,
+                    "wait_time": 5
+                }
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.I.RATING",
+            "P_APP_NAME": "driver-ios",
+            "P_TRIP_ID": "NY2048",
+            "P_SOURCE_ENTITY": "CUSTOMER",
+            "P_SOURCE_ENTITY_ID": "CUS103",
+            "P_TARGET_ENTITY": "DRIVER",
+            "P_TARGET_ENTITY_ID": "NY2510-75795",
+            "P_RATING": 2,
+            "P_FEEDBACK": "Driver was very rude."
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "DRV.S.DRIVER_VEHICLE_INFO",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_ID": "TR0709"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "TRP.I.SEND_MY_CAR",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_ID": "0515-1234"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {
+            "P_PAGE": 1,
+            "P_LIMIT": 3
+        },
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.TRIP_ACTIVITY_LOGS",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_ID": "TR0709"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.DRIVER_POOL_MOVE_DRIVER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "CUS101",
+            "P_DRIVER_ID": "D-1002",
+            "P_SOURCE_POOL_NAME": "Favorite Drivers",
+            "P_TARGET_POOL_NAME": "Airport Specialists"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.DRIVER_POOL_COPY_DRIVER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "CUS101",
+            "P_DRIVER_ID": "D-1002",
+            "P_SOURCE_POOL_NAME": "P-9001",
+            "P_TARGET_POOL_NAMES": [
+                "FAV-101",
+                "P-9002"
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.S.INVITATION_CODE",
+            "P_APP_NAME": "customer_app",
+            "P_INVITATION_CODE": "REF-2031"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.CORP_ACCOUNT_REQUIREMENTS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_ID": "CUST-0043"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.LINK_CORP_ACCOUNT",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "cus-0038",
+            "P_ACCOUNT_NUMBER": "323212",
+            "P_ACCOUNT_NAME": "Acme Logistics",
+            "P_REQUIREMENTS": [
+                {
+                    "requirement_num": "1",
+                    "requirement_value": "EMP1122ABC",
+                    "is_saved": true
+                },
+                {
+                    "requirement_num": "2",
+                    "requirement_value": "4451-02",
+                    "is_saved": true
+                }
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.ACCOUNT_USER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_ID": "cus-002",
+            "P_FIRST_NAME": "Babar",
+            "P_LAST_NAME": "Ali",
+            "P_EMAIL_ADDRESS": "babar-ali@gmail.com",
+            "P_PHONE_NUMBER": "+301 000 1122",
+            "P_ALLOW_CREDIT_CARD_USAGE": true,
+            "P_COPY_NOTIFICATIONS": true,
+            "P_LIVE_TRACK_RIDES": true
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.ACCOUNT_USERS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_ID": "CUST-0043"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.ACCOUNT_USER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "cus-001",
+            "P_FIRST_NAME": "Babar",
+            "P_LAST_NAME": "Smith",
+            "P_EMAIL_ADDRESS": "sophia@gmail.com",
+            "P_PHONE_NUMBER": "+3211321323",
+            "P_ALLOW_CREDIT_CARD_USAGE": false,
+            "P_COPY_NOTIFICATIONS": true,
+            "P_LIVE_TRACK_RIDES": true
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.D.ACCOUNT_USER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Babar-26584"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.ACCOUNT_USER_STATUS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Michael-85043",
+            "P_ACCOUNT_USER_STATUS": "REVOKED"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.INVITE_ACCOUNT_USER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Michael-85043"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.CONTACT_US",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "CUS101",
+            "P_FIRST_NAME": "Mujahid",
+            "P_LAST_NAME": "Ali",
+            "P_EMAIL_ADDRESS": "mujahid@foreaims.com",
+            "P_PHONE_NUMBER": "+923115371464",
+            "P_TITLE": "General Inquiry",
+            "P_MESSAGE": "I need help with my recent booking."
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.PROFILE",
+            "P_CUSTOMER_USER_ID": "Harry-33447",
+            "P_APP_NAME": "customer_app",
+            "P_FIRST_NAME": "Bill",
+            "P_LAST_NAME": "Smith",
+            "P_EMAIL_ADDRESS": "new.email@example.com",
+            "P_PHONE_NUMBER": "+17622202599"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.DELETE_PROFILE_OTP",
+            "P_CUSTOMER_USER_ID": "Harry-33447",
+            "P_LOGIN_ID": "+17622202599"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.PREFERENCES",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "cus-0038",
+            "P_PREFERENCE_KEY": "is_secure_login_enabled",
+            "P_PREFERENCE_VALUE": true
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.FAVORITE_ADDRESSES",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Emily-47559"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.FAVORITE_ADDRESS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Emily-47559",
+            "P_NICK_NAME": "Home_2",
+            "P_FULL_ADDRESS": "4701 Greenview Lane, Atlanta, GA 30303, USA",
+            "P_LATITUDE": "33.749000",
+            "P_LONGITUDE": "-84.388000",
+            "P_GOOGLE_REFERENCE_ID": "ChIJ3S-JXmauEmsRUcIaWtf4MzE",
+            "P_CITY": "Atlanta",
+            "P_STATE": "Georgia",
+            "P_COUNTRY": "United States",
+            "P_POSTAL_CODE": "30303",
+            "P_ADDRESS_TYPE": "STREET"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.FAVORITE_ADDRESS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Emily-47559",
+            "P_NICK_NAME": "Home_2",
+            "P_FA_IDENTIFIER": "Sharif_Land",
+            "P_FULL_ADDRESS": "Lahore Pak View, GA 30303, USA, Thokar",
+            "P_LATITUDE": "33.749000",
+            "P_LONGITUDE": "-84.388000",
+            "P_GOOGLE_REFERENCE_ID": "ChIJ3S-JXmauEmsRUcIaWtf4MzE",
+            "P_CITY": "Atlanta Shrif",
+            "P_STATE": "Georgia",
+            "P_COUNTRY": "Dubai Chonk",
+            "P_POSTAL_CODE": "30303",
+            "P_ADDRESS_TYPE": "STREET"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.D.FAVORITE_ADDRESS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_ID": "Emily-47559",
+            "P_NICK_NAME": "Home3"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
             "viewName": "LOGIN",
             "clientVersion": "1.0.0",
             "APIVersion": "1.0.1",
@@ -23,9 +923,9 @@
         "jMetaData": {},
         "jData": {
             "P_ACTION_CODE": "CUS.S.LOGIN_CUSTOMER",
-            "P_APP_NAME": "driver-ios",
-            "P_LOGIN_ID": "test@email.com",
-            "P_PASSWORD": "123456"
+            "P_APP_NAME": "customer_app",
+            "P_LOGIN_ID": "+923115371464",
+            "P_PASSWORD": "Test#1abc"
         }
     },
     {
@@ -38,7 +938,7 @@
             "Target": "BRAPI",
             "deviceType": "Mobile",
             "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.40.37",
+            "deviceID": "72.255.1.149",
             "viewName": "LOGIN",
             "clientVersion": "1.0.0",
             "APIVersion": "1.0.1",
@@ -51,9 +951,9 @@
         },
         "jMetaData": {},
         "jData": {
-            "P_ACTION_CODE": "CUS.S.CUSTOMER_BY_ID",
-            "P_APP_NAME": "driver-ios",
-            "P_CUSTOMER_ID": "Mujahid1234"
+            "P_ACTION_CODE": "CUS.S.LOGIN_WITHOUT_PASSWORD",
+            "P_APP_NAME": "customer_app",
+            "P_LOGIN_ID": "+923115371464"
         }
     },
     {
@@ -66,7 +966,7 @@
             "Target": "BRAPI",
             "deviceType": "Mobile",
             "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.40.37",
+            "deviceID": "72.255.1.149",
             "viewName": "LOGIN",
             "clientVersion": "1.0.0",
             "APIVersion": "1.0.1",
@@ -79,28 +979,902 @@
         },
         "jMetaData": {},
         "jData": {
-            "P_ACTION_CODE": "CMN.S.HEATMAP_COORDINATES",
+            "P_ACTION_CODE": "CUS.S.FORGOT_PASSWORD_OTP",
+            "P_APP_NAME": "customer_app",
+            "P_LOGIN_ID": "+923115371464"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.S.PRIVACY_POLICY",
+            "P_APP_NAME": "customer_app"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.S.TERMS_AND_CONDITIONS",
+            "P_APP_NAME": "customer_app"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.S.USER_AGREEMENT",
+            "P_APP_NAME": "customer_app"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.U.UPDATE_PASSWORD",
+            "P_APP_NAME": "customer_app",
+            "P_LOGIN_ID": "+923115371464",
+            "P_OLD_PASSWORD": "Test#1abc",
+            "P_NEW_PASSWORD": "Test#1ABC"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.DRIVER_POOLS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "cus-0038"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.DRIVER_POOL_NAMES",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "cus-0038"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.DRIVER_POOL",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "cus-0038",
+            "P_POOL_NAME": "Favorite Drivers"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.D.DRIVER_POOL_DRIVER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "cus-0038",
+            "P_POOL_NAME": "JFK Airport Drivers",
+            "P_DRIVER_ID": "D-1004"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.ADDITIONAL_CONTACT",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Michael-85043",
+            "P_CONTACT_TYPE": "PHONE",
+            "P_LABEL": "Phone1",
+            "P_EMAIL_ADDRESS": null,
+            "P_PHONE_NUMBER": "+1234567190",
+            "P_PHONE_NUMBER_TYPE": "MOBILE",
+            "P_VERIFICATION_METHODS": [
+                "SMS",
+                "CALL"
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.ADDITIONAL_CONTACTS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Michael-85043"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.ADDITIONAL_CONTACT",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Michael-85043",
+            "P_CONTACT_TYPE": "EMAIL",
+            "P_LABEL": "EMAIL 1",
+            "P_CONTACT_IDENTIFIER": "EAmily11@GMAIL.COM",
+            "P_EMAIL_ADDRESS": "EAmily121@GMAIL.COM",
+            "P_PHONE_NUMBER": null,
+            "P_PHONE_NUMBER_TYPE": null,
+            "P_VERIFICATION_METHODS": [
+                "EMAIL"
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.D.ADDITIONAL_CONTACT",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "Michael-85043",
+            "P_CONTACT_IDENTIFIER": "emailyiw2@GMAIL.COM"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.REMOVE_PROFILE_IMAGE",
+            "P_CUSTOMER_USER_ID": "cus-0038",
+            "P_APP_NAME": "customer_app"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.DRIVER_POOL_DRIVER",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "bob1002",
+            "P_DRIVER_ID": "DRV-2024-0001",
+            "P_POOL_NAME": "Street racers"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.S.DROP_DOWN",
+            "P_APP_NAME": "customer_app",
+            "P_KEY": "contact_us_subjects"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {
+            "P_PAGE": 1,
+            "P_LIMIT": 10,
+            "P_FROM_DATE": "2026-07-01",
+            "P_TO_DATE": "2026-07-31"
+        },
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.TRIPS",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "bob1002",
+            "P_FILTER": "ACTIVE",
+            "P_IS_CANCELLED": "NO"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.TRIP_RECEIPT",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_NUMBER": "TR0709"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.I.TRIP_RECEIPT_EMAIL",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_NUMBER": "TR0709",
+            "P_TO": "rider@example.com",
+            "P_FROM": "customer@example.com",
+            "P_SUBJECT": "Receipt for booking_number: VM7WL0\\n\\nTrip Requested: 08:00 AM\\nDriver Enroute: 08:10 AM\\nDriver Arrived: 08:25 AM\\nTrip Started: 08:35 AM\\nStop: 09:05 AM\\nTrip Completed: 09:45 AM\\n\\nPrice Breakdown\\nTolls: $6.50\\nChild Seat: $20.00\\nPlatform Fee: $15.24\\nDriver Payout: $75.35\\nCustomer Offer: $120.00\\nGovernment Taxes and Surcharges: $17.50\\nMeet & Greet (30 mins free wait time): $50.00"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.BILLING_HISTORY",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_ID": "cus-002"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {
+            "P_LIMIT": 20,
+            "P_PAGE": 1
+        },
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.RECENT_AND_FAVORITE_ADDRESSES",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "bob1002"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.PRICE_PAYMENTS_DETAILS",
+            "P_CUSTOMER_USER_ID": "CUS101",
+            "P_RESERVATION": {
+                "trip_type": "ONE_WAY",
+                "reservation_time": "NOW",
+                "pickup_address": {
+                    "formatted_address": "42-20 27th St",
+                    "lat": 40.7501,
+                    "lng": -73.9375
+                },
+                "destination_address": {
+                    "formatted_address": "20 W 34th St",
+                    "lat": 40.7484,
+                    "lng": -73.9857
+                },
+                "stops": [],
+                "special_requirements": {
+                    "passengers": 1
+                }
+            },
+            "P_SELECTED_SERVICE_CLASS": "ECONOMY",
+            "P_OFFER_PRICE": 130.0
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.MARK_NOTIFICATION_AS_READ",
+            "P_APP_NAME": "customer-ios",
+            "P_ENTITY_ID": "bob1002",
+            "P_ENTITY_NAME": "customer_users",
+            "P_NOTIFICATION_IDS": [
+                "N-012"
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {
+            "page": 1,
+            "limit": 20
+        },
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.NOTIFICATIONS",
+            "P_APP_NAME": "customer-ios",
+            "P_ENTITY_ID": "bob1002",
+            "P_ENTITY_NAME": "customer_users",
+            "P_IS_SEEN": null
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.D.NOTIFICATIONS",
+            "P_APP_NAME": "customer-ios",
+            "P_ENTITY_ID": "bob1002",
+            "P_ENTITY_NAME": "customer_users",
+            "P_NOTIFICATION_IDS": [
+                "N-012"
+            ]
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.GOOGLE_LOGIN",
+            "P_APP_NAME": "customer_app",
+            "P_AUTH_PROVIDER": "GOOGLE",
+            "P_GOOGLE_ID": "117482938472938472938",
+            "P_EMAIL_ADDRESS": "jane.smith@gmail.com",
+            "P_FIRST_NAME": "Jane",
+            "P_LAST_NAME": "Smith",
+            "P_PROFILE_IMAGE_URL": "https://lh3.googleusercontent.com/a/abc123"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.APPLE_LOGIN",
+            "P_APP_NAME": "customer_app",
+            "P_AUTH_PROVIDER": "APPLE",
+            "P_APPLE_USER_ID": "001234.fae8b9a1c2d34e56f78901234567890a.1234",
+            "P_EMAIL_ADDRESS": "jane.smith@privaterelay.appleid.com",
+            "P_FIRST_NAME": "Jane",
+            "P_LAST_NAME": "Smith"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.S.TRIP_CANCEL_PREVIEW",
+            "P_APP_NAME": "customer_app",
+            "P_CUSTOMER_USER_ID": "CUS101",
+            "P_TRIP_ID": "0515-1234"
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CUS.U.CANCEL_TRIP",
+            "P_APP_NAME": "customer_app",
+            "P_TRIP_CANCELLED_BY_ENTITY": "CUSTOMER",
+            "P_TRIP_CANCELLED_BY_ENTITY_ID": "bob1002",
+            "P_TRIP_ID": "TR0709",
+            "P_REASON": "VEHICLE_ISSUE",
+            "P_COMMENTS": ""
+        }
+    },
+    {
+        "jHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "BRAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "jMetaData": {},
+        "jData": {
+            "P_ACTION_CODE": "CMN.RESERVATION.TYPES",
             "P_APP_NAME": "driver-ios"
-        }
-    },
-    {
-        "jHeader": {
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "client": "BlinkRide",
-            "clientIP": "127.0.0.1",
-            "Source": "AZSPostman",
-            "Target": "BRAPI"
-        },
-        "jMetaData": {},
-        "jData": {
-            "P_ACTION_CODE": "TRP.U.BID_STATUS",
-            "P_APP_NAME": "driver-ios",
-            "P_TRIP_BID_STATUS_UPDATED_BY_ENTITY": "DRIVER",
-            "P_TRIP_BID_STATUS_UPDATED_BY_ENTITY_ID": "DRV-2024-0001",
-            "P_TRIP_BID_ID": "TB-6393",
-            "P_TRIP_ID": "EEI1GU",
-            "P_ACTION": "CANCELLED"
         }
     }
 ]

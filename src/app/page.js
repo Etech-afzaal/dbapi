@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.card} aria-labelledby="blinkride-title">
-          <h2 id="blinkride-title">BlinkRide</h2>
+          <h2 id="blinkride-title">BlinkRide Postman</h2>
           <div className={styles.links}>
             <Link href="/blinkride/driver-native">BR Driver Native App</Link>
             <Link href="/blinkride/io-web-portal">BR IO Web Portal</Link>
