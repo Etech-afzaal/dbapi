@@ -6,8 +6,9 @@ export default function PageSkeleton({ kind = "form" }) {
       <main className={styles.home} aria-busy="true" aria-label="Loading home page">
         <div className={`${styles.shimmer} ${styles.title}`} />
         <div className={styles.cards}>
-          <div className={`${styles.shimmer} ${styles.card}`} />
-          <div className={`${styles.shimmer} ${styles.card}`} />
+          {[0, 1, 2, 3].map((item) => (
+            <div key={item} className={`${styles.shimmer} ${styles.card}`} />
+          ))}
         </div>
       </main>
     );
