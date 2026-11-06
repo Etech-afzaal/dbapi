@@ -24,6 +24,12 @@ const blinkRideItems = [
   { href: "/blinkride/customer-app", label: "BR Customer App", icon: "person" },
 ];
 
+const gftItems = [
+  { href: "/", label: "Back to Home", icon: "home" },
+  { href: "/gft-postman", label: "GFT Postman", icon: "person" },
+  { label: "View Database Logs", icon: "database" },
+];
+
 function Icon({ name }) {
   if (name === "home") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>;
   if (name === "document") return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2.75h8l5 5V21a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2V4.75a2 2 0 0 1 2-2Z"/><path d="M14 3v5h5M8 13h8M8 17h8"/></svg>;
@@ -36,6 +42,8 @@ export default function DashboardNav() {
   const pathname = usePathname();
   const items = pathname.startsWith("/blinkride/")
     ? blinkRideItems
+    : pathname.startsWith("/gft-postman")
+      ? gftItems
     : pathname.startsWith("/xyzcar-")
       ? xyzItems
       : eliteItems;
