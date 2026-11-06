@@ -37,9 +37,14 @@ export default function Home() {
         <section className={styles.card} aria-labelledby="gft-title">
           <h2 id="gft-title">GFT Postman</h2>
           <div className={styles.links}>
+<<<<<<< HEAD
+            <Link href="/gft-postman">GFT Postman</Link>
+            <span className={styles.disabled} aria-disabled="true">View Database Logs</span>
+=======
             <span className={styles.disabled} aria-disabled="true">
               GFT Postman
             </span>
+>>>>>>> 4254edc24e1a8056f6c081bb1447e64869bb9c93
           </div>
         </section>
       </div>

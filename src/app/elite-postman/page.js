@@ -42,26 +42,29 @@ export const GatewayApiTest = ({
           throw new Error("Failed to load action codes");
         }
         const data = await response.json();
-        const normalizedData = Array.isArray(data) && data.every((item) => item?.jData?.P_ACTION_CODE)
+        const normalizedData = Array.isArray(data) && data.every((item) => (item?.jData || item?.JData)?.P_ACTION_CODE)
           ? data.map((item) => {
-              const header = item.jHeader || {};
-              const actionCode = item.jData.P_ACTION_CODE;
+              const header = item.jHeader || item.JHeader || {};
+              const jData = item.jData || item.JData;
+              const actionCode = jData.P_ACTION_CODE;
               const viewName = header.viewName || header.ViewName || "LOGIN";
+              const metaData = item.jMetaData || item.JMetaData || {};
+              const notes = item.notes || item.Notes || "";
 
               return {
                 code: actionCode,
                 desc: "",
-                notes: "BlinkRide",
+                notes,
                 payload: {
                   ActionCode: actionCode,
                   ViewName: viewName,
                   ClientIP: header.clientIP || header.ClientIP || "::1",
                   JsonReq: {
                     JHeader: header,
-                    JMetaData: item.jMetaData || item.JMetaData || {},
-                    JData: item.jData,
+                    JMetaData: metaData,
+                    JData: jData,
                   },
-                  Notes: "BlinkRide",
+                  Notes: notes,
                 },
               };
             })
