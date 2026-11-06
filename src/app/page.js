@@ -4,7 +4,7 @@ import styles from "./home.module.css";
 export default function Home() {
   return (
     <main className={styles.home}>
-      <h1 className={styles.title}>Postman API Clients_1</h1>
+      <h1 className={styles.title}>Postman API Clients</h1>
       <div className={styles.cards}>
         <section className={styles.card} aria-labelledby="elite-title">
           <h2 id="elite-title">Elite Postman</h2>
