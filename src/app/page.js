@@ -4,7 +4,7 @@ import styles from "./home.module.css";
 export default function Home() {
   return (
     <main className={styles.home}>
-      <h1 className={styles.title}>Postman API Clients</h1>
+      <h1 className={styles.title}>Postman API Clients_1</h1>
       <div className={styles.cards}>
         <section className={styles.card} aria-labelledby="elite-title">
           <h2 id="elite-title">Elite Postman</h2>
@@ -38,7 +38,9 @@ export default function Home() {
           <h2 id="gft-title">GFT Postman</h2>
           <div className={styles.links}>
             <Link href="/gft-postman">GFT Postman</Link>
-            <span className={styles.disabled} aria-disabled="true">View Database Logs</span>
+            <span className={styles.disabled} aria-disabled="true">
+              View Database Logs
+            </span>
           </div>
         </section>
       </div>
