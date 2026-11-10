@@ -23,8 +23,8 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.U.CHANGE_PASSWORD",
-            "P_LOGIN_ID": "aliraza7705",
-            "P_OLD_PASSWORD": "test1234",
+            "P_LOGIN_ID": "amrankhan1002",
+            "P_OLD_PASSWORD": "test@1234",
             "P_NEW_PASSWORD": "test1234"
         },
         "Notes": "Test Notes ..."
@@ -53,28 +53,28 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.I.BUY_ORDER",
-            "P_ACCOUNT_NUMBER": "",
-            "P_ORDER_SUB_TYPE": "MARKET",
-            "P_ORDER_CAT": "SLICE",
+            "P_ACCOUNT_NUMBER": "P-1042",
+            "P_ORDER_SUB_TYPE": "Market",
+            "P_ORDER_CAT": "DO",
             "P_METAL": "GOLD",
             "P_PRODUCT_TYPE": "SLICE",
             "P_CUSTOMER_REQUEST": {
                 "P_PAYMENT_METHOD": "WALLET",
-                "P_AMOUNT": "",
-                "P_EXPIRATION_TIME": "",
-                "P_IS_PARTIAL_FILL_ALLOWED": "false",
-                "P_RATE": "",
-                "P_WEIGHT": ""
+                "P_AMOUNT": 15000,
+                "P_EXPIRATION_TIME": null,
+                "P_IS_PARTIAL_FILL_ALLOWED": false,
+                "P_RATE": null,
+                "P_WEIGHT": 0.25
             },
-            "P_ITEM_CODE": "",
-            "P_ITEM_WEIGHT": "",
+            "P_ITEM_CODE": "INV-GLD-001",
+            "P_ITEM_WEIGHT": 0.25,
             "P_BUY_ITEMS": [],
-            "P_CUSTOMER_IP_ADDRESS": "",
-            "P_LATITUDE": "",
-            "P_LONGITUDE": "",
-            "P_NOTES": "",
-            "P_DISCOUNT_AMOUNT": "",
-            "P_TRANSACTION_FEE": ""
+            "P_CUSTOMER_IP_ADDRESS": "192.0.2.10",
+            "P_LATITUDE": "31.5204",
+            "P_LONGITUDE": "74.3587",
+            "P_NOTES": "Buy 0.25 grams of gold at market rate",
+            "P_DISCOUNT_AMOUNT": 0,
+            "P_TRANSACTION_FEE": 100
         },
         "Notes": "createBuyOrder"
     },
@@ -102,22 +102,22 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.I.EXCHANGE_ORDER",
-            "P_ACCOUNT_NUMBER": "",
-            "P_FROM_ASSET_CODE": "",
-            "P_TO_ASSET_CODE": "",
-            "P_FROM_METAL": "",
-            "P_TO_METAL": "",
-            "P_FROM_ITEM_CODE": "",
-            "P_TO_ITEM_CODE": "",
+            "P_ACCOUNT_NUMBER": "P-1042",
+            "P_FROM_ASSET_CODE": "GLD",
+            "P_TO_ASSET_CODE": "SLV",
+            "P_FROM_METAL": "GOLD",
+            "P_TO_METAL": "SILVER",
+            "P_FROM_ITEM_CODE": "INV-GLD-001",
+            "P_TO_ITEM_CODE": "SLV-241212",
             "P_CUSTOMER_REQUEST": {
-                "P_FROM_WEIGHT": "",
-                "P_TO_WEIGHT": ""
+                "P_FROM_WEIGHT": 1.0,
+                "P_TO_WEIGHT": 50.0
             },
-            "P_CUSTOMER_IP_ADDRESS": "",
-            "P_LATITUDE": "",
-            "P_LONGITUDE": "",
-            "P_NOTES": "",
-            "P_DISCOUNT_AMOUNT": ""
+            "P_CUSTOMER_IP_ADDRESS": "192.0.2.10",
+            "P_LATITUDE": "31.5204",
+            "P_LONGITUDE": "74.3587",
+            "P_NOTES": "Exchange 1 gram of gold for 50 grams of silver",
+            "P_DISCOUNT_AMOUNT": 0
         },
         "Notes": "createExchangeOrder"
     },
@@ -147,12 +147,12 @@
             "P_ACTION_CODE": "TRN.I.MONEY_TRANSACTION",
             "P_REQUEST_TYPE": "deposit",
             "P_TRANSACTION_TYPE": "cash deposit",
-            "P_CUSTOMER_REC_ID": "",
+            "P_CUSTOMER_REC_ID": 1,
             "P_SENDER_INFO": {
-                "P_AMOUNT_SENT": ""
+                "P_AMOUNT_SENT": 10000
             },
             "P_RECEIVER_INFO": {
-                "P_AMOUNT_RECEIVED": ""
+                "P_AMOUNT_RECEIVED": 10000
             },
             "P_CARD_NUMBER": "",
             "P_CARD_INFO": {
@@ -162,7 +162,7 @@
             "P_PROCESSOR_NAME": "",
             "P_PROCESSOR_TOKEN": ""
         },
-        "Notes": "createMoneyTransaction"
+        "Notes": "createMoneyTransaction - Cash Deposit"
     },
     {
         "JHeader": {
@@ -188,24 +188,29 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.I.REDEEM_ORDER",
-            "P_ACCOUNT_NUMBER": "",
-            "P_ASSET_CODE": "",
-            "P_METAL": "",
+            "P_ACCOUNT_NUMBER": "P-1042",
+            "P_ASSET_CODE": "GLD",
+            "P_METAL": "GOLD",
             "P_CUSTOMER_REQUEST": {
-                "P_WEIGHT": ""
+                "P_WEIGHT": 10
             },
             "P_REDEEM_ITEMS": [
                 {
-                    "P_ITEM_CODE": "",
-                    "P_ITEM_WEIGHT": "",
-                    "P_ITEM_QUANTITY": ""
+                    "P_ITEM_CODE": "GLD-RNG-1001",
+                    "P_ITEM_WEIGHT": 5,
+                    "P_ITEM_QUANTITY": 1
+                },
+                {
+                    "P_ITEM_CODE": "INV-GLD-001",
+                    "P_ITEM_WEIGHT": 1,
+                    "P_ITEM_QUANTITY": 5
                 }
             ],
-            "P_CUSTOMER_IP_ADDRESS": "",
-            "P_LATITUDE": "",
-            "P_LONGITUDE": "",
-            "P_NOTES": "",
-            "P_DISCOUNT_AMOUNT": ""
+            "P_CUSTOMER_IP_ADDRESS": "192.0.2.10",
+            "P_LATITUDE": "31.5204",
+            "P_LONGITUDE": "74.3587",
+            "P_NOTES": "Redeem 10 grams of gold into physical gold products",
+            "P_DISCOUNT_AMOUNT": 0
         },
         "Notes": "createRedeemOrder"
     },
@@ -233,24 +238,24 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.I.SELL_ORDER",
-            "P_ACCOUNT_NUMBER": "",
-            "P_ASSET_CODE": "",
-            "P_ORDER_SUB_TYPE": "MARKET",
-            "P_ORDER_CAT": "SLICE",
-            "P_METAL": "",
-            "P_ITEM_CODE": "",
+            "P_ACCOUNT_NUMBER": "P-1042",
+            "P_ASSET_CODE": "GLD",
+            "P_ORDER_SUB_TYPE": "Market",
+            "P_ORDER_CAT": "DO",
+            "P_METAL": "GOLD",
+            "P_ITEM_CODE": "INV-GLD-001",
             "P_CUSTOMER_REQUEST": {
                 "P_PAYMENT_METHOD": "WALLET",
-                "P_WEIGHT": "",
-                "P_RATE": "",
-                "P_EXPIRATION_TIME": "",
-                "P_IS_PARTIAL_FILL_ALLOWED": "false"
+                "P_WEIGHT": 1.5,
+                "P_RATE": null,
+                "P_EXPIRATION_TIME": null,
+                "P_IS_PARTIAL_FILL_ALLOWED": false
             },
-            "P_CUSTOMER_IP_ADDRESS": "",
-            "P_LATITUDE": "",
-            "P_LONGITUDE": "",
-            "P_NOTES": "",
-            "P_DISCOUNT_AMOUNT": ""
+            "P_CUSTOMER_IP_ADDRESS": "192.0.2.10",
+            "P_LATITUDE": "31.5204",
+            "P_LONGITUDE": "74.3587",
+            "P_NOTES": "Sell 1.5 grams of gold at current market rate",
+            "P_DISCOUNT_AMOUNT": 0
         },
         "Notes": "createSellOrder"
     },
@@ -278,11 +283,14 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "DOC.U.MANAGEMENT",
-            "P_DOC_TYPE": "",
-            "P_NOTES": "",
-            "P_ATTACHMENT_URL": "",
-            "P_LOGIN_ID": "",
-            "P_USER_TYPE": "CUSTOMER"
+            "P_LOGIN_ID": "amrankhan1002",
+            "P_USER_TYPE": "CUSTOMER",
+            "P_DOCUMENT_DETAILS": {
+                "P_DOC_TYPE": "Passport",
+                "P_FILE_NAME": "passport_ali_raza.pdf",
+                "P_ATTACHMENT_URL": "/uploads/customers/101/passport_ali_raza.pdf",
+                "P_MIME_TYPE": "application/pdf"
+            }
         },
         "Notes": "documentManagment"
     },
@@ -310,10 +318,10 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "CAL.S.EXCHANGE_METAL",
-            "P_METAL_TO_EXCHANGE": "",
-            "P_METAL_TO_EXCHANGE_ACQUIRE": "",
-            "P_QUANTITY": "",
-            "P_UNIT": ""
+            "P_METAL_TO_EXCHANGE": "GLD",
+            "P_METAL_TO_EXCHANGE_ACQUIRE": "SLV",
+            "P_QUANTITY": "1.5",
+            "P_UNIT": "g"
         },
         "Notes": "exchangeMetalCalculator"
     },
@@ -341,9 +349,9 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.FORGOT_LOGIN_ID",
-            "P_EMAIL": "",
-            "P_PHONE": "",
-            "P_CNIC": ""
+            "P_EMAIL": "khan@gmail.com",
+            "P_PHONE": "321-2412121",
+            "P_CNIC": "4546DF565465GRT"
         },
         "Notes": "forgotLoginID"
     },
@@ -371,7 +379,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.FORGOT_PASSWORD_OTP",
-            "P_LOGIN_ID": ""
+            "P_LOGIN_ID": "amrankhan1002"
         },
         "Notes": "forgotPassword"
     },
@@ -399,9 +407,9 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.I.OTP",
-            "P_SOURCE": "",
-            "P_RECIPIENT_EMAIL_ADDRESS": "",
-            "P_RECIPIENT_PHONE_NUMBER": ""
+            "P_CONTACT_TYPE": "email",
+            "P_DESTINATION": "03011122333",
+            "P_PURPOSE": "REGISTER"
         },
         "Notes": "generate_otp"
     },
@@ -429,7 +437,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.AUTH",
-            "P_CUSTOMER_REC_ID": 3
+            "P_ACCOUNT_NUM": "P-1042"
         },
         "Notes": "getAuth"
     },
@@ -457,7 +465,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "FIN.S.CREDIT_CARD",
-            "P_ACCOUNT_NUM": ""
+            "P_ACCOUNT_NUM": "P-1042"
         },
         "Notes": "getCreditCard"
     },
@@ -485,7 +493,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "CUS.S.CUSTOMER",
-            "P_ACCOUNT_NUMBER": ""
+            "P_ACCOUNT_NUMBER": "P-1042"
         },
         "Notes": "getCustomer"
     },
@@ -544,7 +552,7 @@
         },
         "JData": {
             "P_ACTION_CODE": "INV.S.INVENTORY",
-            "P_ITEM_TYPE": ""
+            "P_ITEM_TYPE": "chain"
         },
         "Notes": "getInventory"
     },
@@ -572,8 +580,8 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "TRN.S.MONEY_TRANSACTION",
-            "P_ACCOUNT_NUM": "",
-            "P_REQUEST_TYPE": ""
+            "P_ACCOUNT_NUM": "P-1042",
+            "P_REQUEST_TYPE": "wITHDRAW"
         },
         "Notes": "getMoneyManager"
     },
@@ -629,7 +637,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.S.BUY_ORDER",
-            "P_ACCOUNT_NUMBER": ""
+            "P_ACCOUNT_NUMBER": "P-1042"
         },
         "Notes": "getOrders"
     },
@@ -657,18 +665,68 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "CUS.U.CUSTOMER",
-            "P_CUSTOMER_REC_ID": "",
-            "P_FIRST_NAME": "",
-            "P_LAST_NAME": "",
-            "P_EMAIL": "",
-            "P_PHONE": "",
-            "P_WHATSAPP_NUMBER": "",
-            "P_NATIONAL_ID": "",
+            "P_CUSTOMER_REC_ID": 2,
+            "P_FIRST_NAME": "Ali",
+            "P_LAST_NAME": "Khan",
+            "P_EMAIL": "ali.khan@example.com",
+            "P_PHONE": "03009876543",
+            "P_WHATSAPP_NUMBER": "03009876543",
+            "P_NATIONAL_ID": "3520212345671",
             "P_PASSWORD": "",
-            "P_RESIDENTIAL_ADDRESS": {},
-            "P_CUSTOMER_STATUS": "",
+            "P_RESIDENTIAL_ADDRESS": {
+                "address_line_1": "House 50, Street 12",
+                "address_line_2": "Block B, Model Town",
+                "city": "Lahore",
+                "state": "Punjab",
+                "postal_code": "54700",
+                "country": "Pakistan"
+            },
+            "P_CUSTOMER_STATUS": "active"
+        },
+        "Notes": "upsertCustomer"
+    },
+    {
+        "JHeader": {
+            "client": "GFT",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "CUS.I.CUSTOMER",
+            "P_FIRST_NAME": "Ali",
+            "P_LAST_NAME": "Ahmed",
+            "P_EMAIL": "ali.ahmed@example.com",
+            "P_PHONE": "03001234567",
+            "P_WHATSAPP_NUMBER": "03001234567",
+            "P_NATIONAL_ID": "3520212345671",
+            "P_PASSWORD": "Ali@12345",
+            "P_RESIDENTIAL_ADDRESS": {
+                "address_line_1": "House 25, Street 10",
+                "address_line_2": "Block A, Model Town",
+                "city": "Lahore",
+                "state": "Punjab",
+                "postal_code": "54700",
+                "country": "Pakistan"
+            },
+            "P_CUSTOMER_STATUS": "registration_request",
             "P_CORPORATE_ACCOUNT_REC_ID": "",
-            "P_BY": ""
+            "P_BY": "SYSTEM"
         },
         "Notes": "upsertCustomer"
     },
@@ -696,10 +754,9 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "CUS.U.PREFERENCES",
-            "P_LOGIN_ID": "",
-            "P_PREFERENCE_KEY": "",
-            "P_PREFERENCE_VALUE": "",
-            "P_BY": ""
+            "P_LOGIN_ID": "aliahmed6007",
+            "P_PREFERENCE_KEY": "theme",
+            "P_PREFERENCE_VALUE": "system"
         },
         "Notes": "savePreferences"
     },
@@ -727,8 +784,8 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.LOGIN",
-            "P_LOGIN_ID": "",
-            "P_PASSWORD": ""
+            "P_LOGIN_ID": "amrankhan1002",
+            "P_PASSWORD": "test@1234"
         },
         "Notes": "loginCustomer"
     },
@@ -756,11 +813,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.VERIFY_EXISTING_NUMBER",
-            "P_PHONE_NUM": "",
-            "P_CONTACT_TYPE": "phone",
-            "P_DESTINATION": "",
-            "P_PURPOSE": "",
-            "P_BY": ""
+            "P_PHONE_NUM": "321-2412121"
         },
         "Notes": "verifiyExistingNumber"
     },
@@ -788,11 +841,10 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.VERIFY_OTP",
-            "P_CONTACT_TYPE": "",
-            "P_DESTINATION": "",
-            "P_OTP_CODE": "",
-            "P_PURPOSE": "",
-            "P_BY": ""
+            "P_CONTACT_TYPE": "email",
+            "P_DESTINATION": "khan@gmail.com",
+            "P_OTP_CODE": "999314",
+            "P_PURPOSE": "FORGOT PASSWORD"
         },
         "Notes": "verifyOtp"
     },
@@ -820,75 +872,11 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.U.RESET_PASSWORD",
-            "P_LOGIN_ID": "",
-            "P_NEW_PASSWORD": "",
-            "P_RESET_TOKEN": ""
+            "P_LOGIN_ID": "khan@gmail.com",
+            "P_NEW_PASSWORD": "test@1234",
+            "P_RESET_TOKEN": "9452d267-dce0-11f1-862e-0affdbde1551"
         },
         "Notes": "resetPassword"
-    },
-    {
-        "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
-            "P_ACTION_CODE": "WLT.I.CUSTOMER_WALLET",
-            "P_CUSTOMER_REC_ID": "",
-            "P_TRADABLE_ASSETS_REC_ID": ""
-        },
-        "Notes": "createAcustomerWallet"
-    },
-    {
-        "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
-            "P_ACTION_CODE": "WLT.I.ACTIVITY",
-            "P_CUSTOMER_REC_ID": "",
-            "P_WALLET_ID": "",
-            "P_ACTIVITY_TYPE": "CREATE",
-            "P_AMOUNT": "",
-            "P_REASON": "",
-            "P_ORDER_REC_ID": "",
-            "P_ORDER_NUMBER": "",
-            "P_TRANSACTION_NUM": ""
-        },
-        "Notes": "wallet_activity"
     },
     {
         "JHeader": {
@@ -943,12 +931,27 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "PRD.U.PRODUCT",
-            "P_PRODUCT_REC_ID": "",
-            "P_ASSET_CODE": "",
-            "P_PRODUCT_CODE": "",
-            "P_PRODUCT_TYPE": "",
-            "P_PRODUCT_NAME": "",
-            "P_BY": ""
+            "P_PRODUCT_REC_ID": 2,
+            "P_ASSET_CODE": "SLV",
+            "P_PRODUCT_CODE": "P-SILVER-2KG",
+            "P_PRODUCT_TYPE": "commodity",
+            "P_PRODUCT_NAME": "Fine Silver Bar 1kg",
+            "P_PRODUCT_QUALITY": "24K",
+            "P_APPROXIMATE_WEIGHT": 10,
+            "P_WEIGHT_UNIT": "GRAM",
+            "P_IS_PHYSICAL": true,
+            "P_IS_SLICEABLE": true,
+            "P_STANDARD_PRICE": 155000,
+            "P_STANDARD_PREMIUM": 3000,
+            "P_PRICE_CURRENCY": "PKR",
+            "P_APPLICABLE_TAXES": 5,
+            "P_QUANTITY_ON_HAND": 80,
+            "P_MINIMUM_ORDER_QUANTITY": 1,
+            "P_TOTAL_SOLD": 20,
+            "P_OFFER_TO_CUSTOMER": true,
+            "P_DISPLAY_ORDER": 1,
+            "P_ALERT_ON_LOW_STOCK": 10,
+            "P_TRANSACTION_FEE": 100
         },
         "Notes": "upsertProduct"
     },
@@ -1004,17 +1007,50 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "INV.U.INVENTORY",
-            "P_INVENTORY_REC_ID": "",
-            "P_ITEM_NAME": "",
-            "P_ITEM_CODE": "",
-            "P_ITEM_TYPE": "",
-            "P_ASSET_CODE": "",
-            "P_ASSET_TYPE": "",
-            "P_PRODUCT_CODE": "",
-            "P_AVAILABILITY_STATUS": "",
-            "P_BY": ""
+            "P_INVENTORY_REC_ID": 2,
+            "P_ITEM_NAME": "Gold Bar 10 Gram Premium",
+            "P_ITEM_CODE": "INV-GLD-001",
+            "P_ITEM_TYPE": "Bar",
+            "P_ASSET_CODE": "GLD",
+            "P_ASSET_TYPE": "Metal",
+            "P_PRODUCT_CODE": "GLD-10G",
+            "P_AVAILABILITY_STATUS": "available"
         },
-        "Notes": "upsertInventory"
+        "Notes": "update Inventory"
+    },
+    {
+        "JHeader": {
+            "client": "GFT",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "INV.I.INVENTORY",
+            "P_ITEM_NAME": "Gold Bar 10 Gram",
+            "P_ITEM_CODE": "INV-GLD-001",
+            "P_ITEM_TYPE": "Physical",
+            "P_ASSET_CODE": "GLD",
+            "P_ASSET_TYPE": "Metal",
+            "P_PRODUCT_CODE": "GLD-10G",
+            "P_AVAILABILITY_STATUS": "available"
+        },
+        "Notes": "Insert Inventory"
     },
     {
         "JHeader": {
@@ -1076,8 +1112,8 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "FIN.S.RATES",
-            "P_ASSET_CODE": "",
-            "P_CURRENCY": ""
+            "P_ASSET_CODE": "GLD",
+            "P_CURRENCY": "USD"
         },
         "Notes": "getRates"
     },
@@ -1105,8 +1141,8 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "FIN.S.ACCOUNT_VERIFICATION",
-            "P_LOGIN_ID": "",
-            "P_ACCOUNT_NUM": ""
+            "P_LOGIN_ID": "khan@gmail.com",
+            "P_ACCOUNT_NUM": "P-1042"
         },
         "Notes": "verifyAccountNum"
     },
@@ -1134,10 +1170,10 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "CAL.S.METAL_TO_CASH",
-            "P_METAL_CODE": "",
-            "P_UNIT": "",
-            "P_WEIGHT": "",
-            "P_AMOUNT": ""
+            "P_METAL_CODE": "SLV",
+            "P_UNIT": "g",
+            "P_WEIGHT": "1.5",
+            "P_AMOUNT": "2000"
         },
         "Notes": "metalToCashConverter"
     },
@@ -1222,7 +1258,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.S.SELL_ORDER",
-            "P_ACCOUNT_NUMBER": ""
+            "P_ACCOUNT_NUMBER": "P-1042"
         },
         "Notes": "getOrders"
     },
@@ -1250,7 +1286,7 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.S.EXCHANGE_ORDER",
-            "P_ACCOUNT_NUMBER": ""
+            "P_ACCOUNT_NUMBER": "P-1042"
         },
         "Notes": "getOrders"
     },
@@ -1278,8 +1314,68 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "ORD.S.REDEEM_ORDER",
-            "P_ACCOUNT_NUMBER": ""
+            "P_ACCOUNT_NUMBER": "P-1042"
         },
         "Notes": "getOrders"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "CMN.U.UPSERT_CONTENT",
+            "P_APP_NAME": "GFT",
+            "P_VIEW_NAME": "login",
+            "P_KEY": "app-customer-register-heading-placeholder-maxlen",
+            "P_VALUE": "110"
+        },
+        "Notes": "upsertContent"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "CMN.S.APP_CONTENT",
+            "P_APP_NAME": "GFT",
+            "P_KEY": "app-customer-name"
+        },
+        "Notes": "getContent"
     }
 ]
