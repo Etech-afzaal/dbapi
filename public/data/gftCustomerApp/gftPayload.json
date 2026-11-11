@@ -1228,36 +1228,6 @@
         },
         "JMetaData": {},
         "JData": {
-            "P_ACTION_CODE": "MSG.I.OUTBOUND_QUEUE",
-            "parent_message_table_name": "",
-            "parent_message_table_rec_id": "",
-            "object_name": ""
-        },
-        "Notes": "queueOutboundMessage"
-    },
-    {
-        "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
             "P_ACTION_CODE": "ORD.S.SELL_ORDER",
             "P_ACCOUNT_NUMBER": "P-1042"
         },
@@ -1378,5 +1348,62 @@
             "P_KEY": "app-customer-name"
         },
         "Notes": "getContent"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "MSG.S.OUTBOUND_QUEUE"
+        },
+        "Notes": "getPendingOutboundMessages"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "MSG.I.OUTBOUND_QUEUE",
+            "P_MESSAGE_GUI_ID": "MSG-5672",
+            "P_CURRENT_STATUS": "SENT",
+            "P_DELIVERY_STATUS": "RECIEVED"
+        },
+        "Notes": "updateOutboundMessageStatus"
     }
 ]
