@@ -407,8 +407,9 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.I.OTP",
-            "P_CONTACT_TYPE": "email",
-            "P_DESTINATION": "03011122333",
+            "P_CONTACT_TYPE": "phone",
+            "P_DESTINATION": "0092321-2412121",
+            "P_PRESET_OTP": "000000",
             "P_PURPOSE": "REGISTER"
         },
         "Notes": "generate_otp"
@@ -785,7 +786,7 @@
         "JData": {
             "P_ACTION_CODE": "AUT.S.LOGIN",
             "P_LOGIN_ID": "amrankhan1002",
-            "P_PASSWORD": "test@1234"
+            "P_PASSWORD": "test@12346"
         },
         "Notes": "loginCustomer"
     },
@@ -841,10 +842,10 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.VERIFY_OTP",
-            "P_CONTACT_TYPE": "email",
-            "P_DESTINATION": "khan@gmail.com",
-            "P_OTP_CODE": "999314",
-            "P_PURPOSE": "FORGOT PASSWORD"
+            "P_CONTACT_TYPE": "phone",
+            "P_DESTINATION": "0092321-2412121",
+            "P_OTP_CODE": "000000",
+            "P_PURPOSE": "REGISTER"
         },
         "Notes": "verifyOtp"
     },
