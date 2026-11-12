@@ -785,9 +785,8 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "AUT.S.LOGIN",
-            "P_LOGIN_ID": "amrankhan1002",
-            "P_PASSWORD": "user@1234",
-            "P_PRESET_OTP": "000000"
+            "P_LOGIN_ID": "khan@gmail.com",
+            "P_PASSWORD": "user@1234"
         },
         "Notes": "loginCustomer"
     },
