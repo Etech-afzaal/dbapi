@@ -350,10 +350,10 @@
         "JData": {
             "P_ACTION_CODE": "AUT.S.FORGOT_LOGIN_ID",
             "P_EMAIL": "khan@gmail.com",
-            "P_PHONE": "321-2412121",
-            "P_CNIC": "4546DF565465GRT"
+            "P_CNIC": "4546DF565465GRT",
+            "P_PRESET_OTP": "000000"
         },
-        "Notes": "forgotLoginID"
+        "Notes": "forgotLoginID - P_CNIC is currently optional because it has not yet been implemented in the design. Either P_PHONE or P_EMAIL can be provided."
     },
     {
         "JHeader": {
@@ -412,7 +412,7 @@
             "P_PRESET_OTP": "000000",
             "P_PURPOSE": "REGISTER"
         },
-        "Notes": "generate_otp"
+        "Notes": "generate_otp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, and LOGIN."
     },
     {
         "JHeader": {
@@ -786,7 +786,8 @@
         "JData": {
             "P_ACTION_CODE": "AUT.S.LOGIN",
             "P_LOGIN_ID": "amrankhan1002",
-            "P_PASSWORD": "test@12346"
+            "P_PASSWORD": "user@1234",
+            "P_PRESET_OTP": "000000"
         },
         "Notes": "loginCustomer"
     },
@@ -847,7 +848,7 @@
             "P_OTP_CODE": "000000",
             "P_PURPOSE": "REGISTER"
         },
-        "Notes": "verifyOtp"
+        "Notes": "verifyOtp -  - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, and LOGIN."
     },
     {
         "JHeader": {
