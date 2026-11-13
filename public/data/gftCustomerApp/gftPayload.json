@@ -813,6 +813,62 @@
         },
         "JMetaData": {},
         "JData": {
+            "P_ACTION_CODE": "AUT.S.AUTH_TOKEN",
+            "P_USER_AUTH_TOKEN": ""
+        },
+        "Notes": "loginCustomer"
+    },
+    {
+        "JHeader": {
+            "client": "GFT",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "AUT.U.AUTH_TOKEN",
+            "P_USER_AUTH_TOKEN": ""
+        },
+        "Notes": "loginCustomer"
+    },
+    {
+        "JHeader": {
+            "client": "GFT",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
             "P_ACTION_CODE": "AUT.S.VERIFY_EXISTING_NUMBER",
             "P_PHONE_NUM": "321-2412121"
         },
