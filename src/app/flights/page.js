@@ -5,6 +5,7 @@ import styles from "../flights.module.css";
 import axios from "axios";
 import Link from "next/link";
 import DashboardNav from "../DashboardNav";
+import ActionCodeInput from "../ActionCodeInput";
 
 const FlightViewApiTest = () => {
   const [gatewayApiUrl, setGatewayApiUrl] = useState(
@@ -216,24 +217,12 @@ const FlightViewApiTest = () => {
           <label htmlFor="actionCode" className={styles.label}>
             FlightView API Request Action Code
           </label>
-          <select
+          <ActionCodeInput
             id="actionCode"
-            name="actionCode"
             value={selectedActionCode}
             onChange={handleActionCodeChange}
-            className={`${styles.input} ${styles.longInput}`}
-          >
-            <option value="">Select Action Code</option>
-            <option value="custom">Custom Action Code</option>
-            {actionCodes.map((action) => (
-              <option key={action.code} value={action.code}>
-                {action.code}
-                {" ( "}
-                {action.desc}
-                {" )"}
-              </option>
-            ))}
-          </select>
+            actions={actionCodes}
+          />
         </div>
 
         <div className={styles.formGroup}>

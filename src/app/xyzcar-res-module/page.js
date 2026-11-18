@@ -5,6 +5,7 @@ import styles from "../page.module.css";
 import axios from "axios";
 import Link from "next/link";
 import DashboardNav from "../DashboardNav";
+import ActionCodeInput from "../ActionCodeInput";
 
 const GatewayApiTest = () => {
   const [gatewayApiUrl, setGatewayApiUrl] = useState(
@@ -262,21 +263,12 @@ const GatewayApiTest = () => {
           <label htmlFor="actionCode" className={styles.label}>
             XYZCar API Request Test
           </label>
-          <select
+          <ActionCodeInput
             id="actionCode"
-            name="actionCode"
             value={selectedActionCode}
             onChange={handleActionCodeChange}
-            className={`${styles.input} ${styles.longInput}`}
-          >
-            <option value="">Select Action Code</option>
-            <option value="custom">Custom Action Code</option>
-            {actionCodes.map((action) => (
-              <option key={action.code} value={action.code}>
-                {action.code}
-              </option>
-            ))}
-          </select>
+            actions={actionCodes}
+          />
         </div>
 
         <div className={styles.formGroup}>
