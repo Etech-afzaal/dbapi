@@ -32,8 +32,21 @@ export default function ActionCodeInput({ id, value, onChange, actions }) {
         aria-expanded={isOpen && filteredActions.length > 0}
         aria-controls={`${id}-options`}
       />
-      {isOpen && filteredActions.length > 0 && (
+      {isOpen && (
         <ul id={`${id}-options`} className={styles.options} role="listbox">
+          <li role="option" aria-selected={false}>
+            <button
+              type="button"
+              className={styles.option}
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={() => {
+                onChange({ target: { value: "custom" } });
+                setIsOpen(false);
+              }}
+            >
+              Custom Action Code
+            </button>
+          </li>
           {filteredActions.map((action) => (
             <li key={action.code} role="option" aria-selected={false}>
               <button
