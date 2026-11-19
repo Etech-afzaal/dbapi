@@ -588,7 +588,7 @@
         "JData": {
             "P_ACTION_CODE": "TRN.S.MONEY_TRANSACTION",
             "P_ACCOUNT_NUM": "P-1042",
-            "P_REQUEST_TYPE": "DEPOSIT"
+            "P_REQUEST_TYPE": "ALL"
         },
         "Notes": "getMoneyManager"
     },
@@ -793,7 +793,7 @@
         },
         "JMetaData": {},
         "JData": {
-            "P_ACTION_CODE": "CUS.I.ADDTIONAL_CONTACT",
+            "P_ACTION_CODE": "CUS.U.ADDTIONAL_CONTACT",
             "P_LOGIN_ID": "amrankhan1002",
             "P_CONTACT_TYPE": "PHONE",
             "P_LABEL": "My Personal Number",
@@ -801,7 +801,7 @@
             "P_IS_CALL": true,
             "P_IS_SMS": true
         },
-        "Notes": "upsertAdditionalContact"
+        "Notes": "upsertAdditionalContact\n\nACTION CODE: CUS.U.ADDTIONAL_CONTACT\n\n1. INSERT - Add Phone Contact\n{\n  \"jData\": {\n    \"P_LOGIN_ID\": \"amrankhan1002\",\n    \"P_CONTACT_TYPE\": \"PHONE\",\n    \"P_LABEL\": \"Personal\",\n    \"P_VALUE\": \"03001234567\",\n    \"P_IS_CALL\": true,\n    \"P_IS_SMS\": true\n  }\n}\n\n2. INSERT - Add Email Contact\n{\n  \"jData\": {\n    \"P_LOGIN_ID\": \"amrankhan1002\",\n    \"P_CONTACT_TYPE\": \"EMAIL\",\n    \"P_LABEL\": \"Work\",\n    \"P_VALUE\": \"amran.work@example.com\"\n  }\n}\n\nNote: P_IS_CALL and P_IS_SMS are not required for EMAIL contacts.\n\n3. UPDATE - Edit Existing Phone Contact\n{\n  \"jData\": {\n    \"P_LOGIN_ID\": \"amrankhan1002\",\n    \"P_OLD_CONTACT_TYPE\": \"PHONE\",\n    \"P_OLD_VALUE\": \"03001234567\",\n    \"P_CONTACT_TYPE\": \"PHONE\",\n    \"P_LABEL\": \"Office\",\n    \"P_VALUE\": \"03009876543\",\n    \"P_IS_CALL\": true,\n    \"P_IS_SMS\": false\n  }\n}\n\nNote: For UPDATE, P_OLD_CONTACT_TYPE and P_OLD_VALUE are required to identify the existing contact. For INSERT, these fields are not required."
     },
     {
         "JHeader": {
@@ -831,7 +831,7 @@
             "P_CONTACT_TYPE": "PHONE",
             "P_VALUE": "+923014455678"
         },
-        "Notes": "upsertAdditionalContact"
+        "Notes": "deleteAdditionalContact"
     },
     {
         "JHeader": {
@@ -1005,7 +1005,7 @@
             "P_OTP_CODE": "000000",
             "P_PURPOSE": "FORGOT LOGIN ID"
         },
-        "Notes": "verifyOtp -  - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, and LOGIN."
+        "Notes": "verifyOtp -  - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE."
     },
     {
         "JHeader": {
