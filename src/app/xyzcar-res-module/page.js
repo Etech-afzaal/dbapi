@@ -143,6 +143,7 @@ const GatewayApiTest = () => {
   };
 
   const handleClear = () => {
+    setSelectedActionCode("");
     setGatewayApiRequest("");
     setGatewayApiRequestNotes("");
     setGatewayApiResponseStatus("");

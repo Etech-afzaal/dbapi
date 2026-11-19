@@ -580,11 +580,15 @@
             "GPSSpeed": "22",
             "GPSBearing": "55"
         },
-        "JMetaData": {},
+        "JMetaData": {
+            "P_LIMIT": 10,
+            "P_FROM_DATE": "2026-11-01",
+            "P_TO_DATE": "2026-11-19"
+        },
         "JData": {
             "P_ACTION_CODE": "TRN.S.MONEY_TRANSACTION",
             "P_ACCOUNT_NUM": "P-1042",
-            "P_REQUEST_TYPE": "wITHDRAW"
+            "P_REQUEST_TYPE": "DEPOSIT"
         },
         "Notes": "getMoneyManager"
     },
@@ -637,9 +641,13 @@
             "GPSSpeed": "22",
             "GPSBearing": "55"
         },
-        "JMetaData": {},
+        "JMetaData": {
+            "P_LIMIT": 15,
+            "P_FROM_DATE": "2026-12-01",
+            "P_TO_DATE": "2026-12-12"
+        },
         "JData": {
-            "P_ACTION_CODE": "ORD.S.BUY_ORDER",
+            "P_ACTION_CODE": "ORD.S.GET_ORDERS",
             "P_ACCOUNT_NUMBER": "P-1042"
         },
         "Notes": "getOrders"
@@ -1357,90 +1365,6 @@
     },
     {
         "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
-            "P_ACTION_CODE": "ORD.S.SELL_ORDER",
-            "P_ACCOUNT_NUMBER": "P-1042"
-        },
-        "Notes": "getOrders"
-    },
-    {
-        "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
-            "P_ACTION_CODE": "ORD.S.EXCHANGE_ORDER",
-            "P_ACCOUNT_NUMBER": "P-1042"
-        },
-        "Notes": "getOrders"
-    },
-    {
-        "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
-            "P_ACTION_CODE": "ORD.S.REDEEM_ORDER",
-            "P_ACCOUNT_NUMBER": "P-1042"
-        },
-        "Notes": "getOrders"
-    },
-    {
-        "JHeader": {
             "client": "BlinkRide",
             "clientIP": "72.255.1.149",
             "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
@@ -1555,5 +1479,121 @@
             "P_DELIVERY_STATUS": "RECIEVED"
         },
         "Notes": "updateOutboundMessageStatus"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "CMN.I.SEND_FEEDBACK",
+            "P_REASON": "Purchase Approval",
+            "P_FEEDBACK": "My gold purchase has been pending for two days. Please check.",
+            "P_CUSTOMER_NAME": "Amran Khan",
+            "P_CUSTOMER_EMAIL": "khan@gmail.com",
+            "P_CUSTOMER_PHONE": "0092321-2412121",
+            "P_ACCOUNT_NUMBER": "P-1042"
+        },
+        "Notes": "submitFeedback"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "CMN.S.BRANCHES",
+            "P_ORGRNIZATION_NAME": "GFT"
+        },
+        "Notes": "submitFeedback"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "CMN.I.APP_INFO",
+            "app_info": {
+                "app_name": "Gold Fin",
+                "release_version": "v1.4.2 (Build 87)",
+                "release_channel": "Production",
+                "last_updated": "2025-11-26"
+            },
+            "device_information": {
+                "device_name": "iPhone 15 Pro",
+                "device_model": "A3101",
+                "manufacturer": "Apple",
+                "operating_system": "iOS",
+                "os_version": "iOS 17.2",
+                "build_number": "21C62"
+            },
+            "device_identifiers": {
+                "device_udid": "00008130-001C2D12J36E8",
+                "identifier_for_vendor": "7A1FC29B-4E21-4B8A-9D"
+            },
+            "app_environment": {
+                "region": "Pakistan (PK)",
+                "language": "English (EN)",
+                "time_zone": "GMT +05:00"
+            },
+            "network_information": {
+                "network_type": "Wi-Fi",
+                "carrier": "Zong",
+                "ip_address": "192.168.1.24"
+            }
+        },
+        "Notes": "submitFeedback"
     }
 ]

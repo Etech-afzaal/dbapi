@@ -7,9 +7,43 @@
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: 10px;
+  padding: 10px 36px 10px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.dropdownButton {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  display: grid;
+  width: 34px;
+  height: calc(100% - 2px);
+  padding: 0;
+  place-items: center;
+  color: #555;
+  background: transparent;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.dropdownButton:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: -3px;
+}
+
+.chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 120ms ease;
+}
+
+.chevronOpen {
+  transform: translateY(2px) rotate(225deg);
 }
 
 .options {

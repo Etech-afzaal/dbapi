@@ -29,9 +29,20 @@ export default function ActionCodeInput({ id, value, onChange, actions }) {
         placeholder="Select or type an Action Code"
         role="combobox"
         aria-autocomplete="list"
-        aria-expanded={isOpen && filteredActions.length > 0}
+        aria-expanded={isOpen}
         aria-controls={`${id}-options`}
       />
+      <button
+        type="button"
+        className={styles.dropdownButton}
+        aria-label={isOpen ? "Close action code options" : "Open action code options"}
+        aria-expanded={isOpen}
+        aria-controls={`${id}-options`}
+        onMouseDown={(event) => event.preventDefault()}
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        <span className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`} aria-hidden="true" />
+      </button>
       {isOpen && (
         <ul id={`${id}-options`} className={styles.options} role="listbox">
           <li role="option" aria-selected={false}>
