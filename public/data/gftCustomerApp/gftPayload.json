@@ -582,6 +582,7 @@
         },
         "JMetaData": {
             "P_LIMIT": 10,
+            "P_PAGE": 1,
             "P_FROM_DATE": "2026-11-01",
             "P_TO_DATE": "2026-11-19"
         },
@@ -642,13 +643,15 @@
             "GPSBearing": "55"
         },
         "JMetaData": {
-            "P_LIMIT": 15,
-            "P_FROM_DATE": "2026-12-01",
+            "P_LIMIT": 10,
+            "P_PAGE": 1,
+            "P_FROM_DATE": "2026-11-01",
             "P_TO_DATE": "2026-12-12"
         },
         "JData": {
             "P_ACTION_CODE": "ORD.S.GET_ORDERS",
-            "P_ACCOUNT_NUMBER": "P-1042"
+            "P_ACCOUNT_NUMBER": "P-1042",
+            "P_ORDER_TYPE": "ALL"
         },
         "Notes": "getOrders"
     },
