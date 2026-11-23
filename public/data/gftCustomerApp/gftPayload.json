@@ -414,7 +414,7 @@
             "P_PRESET_OTP": "000000",
             "P_PURPOSE": "REGISTER"
         },
-        "Notes": "generate_otp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, and LOGIN."
+        "Notes": "generate_otp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE, OTP_METHOD, FORGOT PIN."
     },
     {
         "JHeader": {
@@ -891,7 +891,8 @@
         "JData": {
             "P_ACTION_CODE": "AUT.S.LOGIN",
             "P_LOGIN_ID": "khan@gmail.com",
-            "P_PASSWORD": "user@12345"
+            "P_PASSWORD": "user@12345",
+            "P_PRESET_OTP": "000000"
         },
         "Notes": "loginCustomer"
     },
@@ -1008,7 +1009,7 @@
             "P_OTP_CODE": "000000",
             "P_PURPOSE": "FORGOT LOGIN ID"
         },
-        "Notes": "verifyOtp -  - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE."
+        "Notes": "verifyOtp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE, OTP_METHOD."
     },
     {
         "JHeader": {
@@ -1598,5 +1599,95 @@
             }
         },
         "Notes": "submitFeedback"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "CUS.I.SET_PIN",
+            "P_ACCOUNT_NUM": "P-1042",
+            "P_PIN": "123456"
+        },
+        "Notes": "setPin"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {
+            "BIOMETRIC_VERIFIED": null
+        },
+        "JData": {
+            "P_ACTION_CODE": "AUT.S.LOGIN_WITH_PIN_BIOMETRIC",
+            "P_ACCOUNT_NUM": "P-1042",
+            "P_PIN": "123456"
+        },
+        "Notes": "loginCustomerWithBiometric\n\nACTION CODE: AUT.S.LOGIN_WITH_PIN_BIOMETRIC\n\n1. Login Using PIN\n{\n  \"jData\": {\n    \"P_ACCOUNT_NUM\": \"P-1042\",\n    \"P_PIN\": \"123456\"\n  }\n}\n\nNote: For PIN login, P_PIN is required. BIOMETRIC_VERIFIED is not required.\n\n2. Login Using Fingerprint or Face ID\n{\n  \"jMetaData\": {\n    \"BIOMETRIC_VERIFIED\": true\n  },\n  \"jData\": {\n    \"P_ACCOUNT_NUM\": \"P-1042\"\n  }\n}\n\nNote: For Fingerprint or Face ID login, remove P_PIN from jData and set BIOMETRIC_VERIFIED to true in jMetaData after successful biometric verification.\n\nIMPORTANT: The backend must securely verify biometric authorization. A client-provided BIOMETRIC_VERIFIED flag alone is not sufficient proof of authentication."
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "AUT.U.RESET_PIN",
+            "P_ACCOUNT_NUM": "P-1042",
+            "P_NEW_PIN": "123456",
+            "P_RESET_TOKEN": ""
+        },
+        "Notes": "resetPin"
     }
 ]
