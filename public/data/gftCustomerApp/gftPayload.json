@@ -414,7 +414,7 @@
             "P_PRESET_OTP": "000000",
             "P_PURPOSE": "REGISTER"
         },
-        "Notes": "generate_otp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE, OTP_METHOD, FORGOT PIN."
+        "Notes": "generate_otp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE, OTP_METHOD, FORGOT PIN, WITHDRAWAL"
     },
     {
         "JHeader": {
@@ -1009,7 +1009,7 @@
             "P_OTP_CODE": "000000",
             "P_PURPOSE": "FORGOT LOGIN ID"
         },
-        "Notes": "verifyOtp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE, OTP_METHOD."
+        "Notes": "verifyOtp - P_PURPOSE is an ENUM parameter that accepts the following values: FORGOT LOGIN ID, RESET PASSWORD, FORGOT PASSWORD, REGISTER, LOGIN, DELETE DOCUMENT, DELETE PROFILE, OTP_METHOD, WITHDRAWAL"
     },
     {
         "JHeader": {
@@ -1689,5 +1689,128 @@
             "P_RESET_TOKEN": ""
         },
         "Notes": "resetPin"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "TRN.I.WITHDRAW",
+            "P_ACCOUNT_NUM": "P-1042"
+        },
+        "Notes": "createMoneyWithdrawal"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "TRN.I.DEPOSIT",
+            "P_ACCOUNT_NUM": "P-1042",
+            "P_TRANSACTION_TYPE": "cash deposit",
+            "P_SENDER_INFO": {
+                "P_ACCOUNT_HOLDER_NAME": "John Smith",
+                "P_AMOUNT_SENT": 22000,
+                "P_RECEIPT_NUMBER": "A234",
+                "P_RECEIPT_PICTURE_URL": "https://example.com/receipts/cash.jpg",
+                "P_TRANS_AT": "2026-11-24"
+            },
+            "P_RECEIVER_INFO": {
+                "P_INSTITUTION_NAME": "Bank Al Habib",
+                "P_ACCOUNT_NUMBER": "32322442344345"
+            }
+        },
+        "Notes": "createMoneyDeposit"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "TRN.S.PROCESSING_FEE"
+        },
+        "Notes": "getProcessingFee"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "ORG.S.BANKS",
+            "P_ORGRNIZATION_NAME": "GFT"
+        },
+        "Notes": "getBanks"
     }
 ]
