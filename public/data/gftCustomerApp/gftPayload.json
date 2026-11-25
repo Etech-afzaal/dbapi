@@ -52,55 +52,6 @@
         },
         "JMetaData": {},
         "JData": {
-            "P_ACTION_CODE": "ORD.I.BUY_ORDER",
-            "P_ACCOUNT_NUMBER": "P-1042",
-            "P_ORDER_SUB_TYPE": "Market",
-            "P_ORDER_CAT": "DO",
-            "P_METAL": "GOLD",
-            "P_PRODUCT_TYPE": "SLICE",
-            "P_CUSTOMER_REQUEST": {
-                "P_PAYMENT_METHOD": "WALLET",
-                "P_AMOUNT": 15000,
-                "P_EXPIRATION_TIME": null,
-                "P_IS_PARTIAL_FILL_ALLOWED": false,
-                "P_RATE": null,
-                "P_WEIGHT": 0.25
-            },
-            "P_ITEM_CODE": "INV-GLD-001",
-            "P_ITEM_WEIGHT": 0.25,
-            "P_BUY_ITEMS": [],
-            "P_CUSTOMER_IP_ADDRESS": "192.0.2.10",
-            "P_LATITUDE": "31.5204",
-            "P_LONGITUDE": "74.3587",
-            "P_NOTES": "Buy 0.25 grams of gold at market rate",
-            "P_DISCOUNT_AMOUNT": 0,
-            "P_TRANSACTION_FEE": 100
-        },
-        "Notes": "createBuyOrder"
-    },
-    {
-        "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
             "P_ACTION_CODE": "ORD.I.EXCHANGE_ORDER",
             "P_ACCOUNT_NUMBER": "P-1042",
             "P_FROM_ASSET_CODE": "GLD",
@@ -213,51 +164,6 @@
             "P_DISCOUNT_AMOUNT": 0
         },
         "Notes": "createRedeemOrder"
-    },
-    {
-        "JHeader": {
-            "client": "GFT",
-            "clientIP": "72.255.1.149",
-            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
-            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
-            "Source": "AZSPostman",
-            "Target": "GFTAPI",
-            "deviceType": "Mobile",
-            "deviceInfo": "iPhone 14 A2483",
-            "deviceID": "72.255.1.149",
-            "viewName": "LOGIN",
-            "clientVersion": "1.0.0",
-            "APIVersion": "1.0.1",
-            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
-            "debug": "false",
-            "GPSLatitude": "40.78200",
-            "GPSLongitude": "-73.97783",
-            "GPSSpeed": "22",
-            "GPSBearing": "55"
-        },
-        "JMetaData": {},
-        "JData": {
-            "P_ACTION_CODE": "ORD.I.SELL_ORDER",
-            "P_ACCOUNT_NUMBER": "P-1042",
-            "P_ASSET_CODE": "GLD",
-            "P_ORDER_SUB_TYPE": "Market",
-            "P_ORDER_CAT": "DO",
-            "P_METAL": "GOLD",
-            "P_ITEM_CODE": "INV-GLD-001",
-            "P_CUSTOMER_REQUEST": {
-                "P_PAYMENT_METHOD": "WALLET",
-                "P_WEIGHT": 1.5,
-                "P_RATE": null,
-                "P_EXPIRATION_TIME": null,
-                "P_IS_PARTIAL_FILL_ALLOWED": false
-            },
-            "P_CUSTOMER_IP_ADDRESS": "192.0.2.10",
-            "P_LATITUDE": "31.5204",
-            "P_LONGITUDE": "74.3587",
-            "P_NOTES": "Sell 1.5 grams of gold at current market rate",
-            "P_DISCOUNT_AMOUNT": 0
-        },
-        "Notes": "createSellOrder"
     },
     {
         "JHeader": {
@@ -1812,5 +1718,67 @@
             "P_ORGRNIZATION_NAME": "GFT"
         },
         "Notes": "getBanks"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "ORD.S.BUY_QUOTE",
+            "P_CUSTOMER_REQUEST": {
+                "P_AMOUNT": 55000
+            }
+        },
+        "Notes": "getBuyQuote"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "ORD.I.PRODUCT_APPOINTMENT",
+            "P_ORDER_ID": "ORD-4001",
+            "P_LOCATION": "Dolmen Mall",
+            "P_APPOINTMENT_DATE": "2026-12-04",
+            "P_TIME_SLOT": "10:00 am - 12:00 pm",
+            "P_COMMENTS": "I will pick up my order."
+        },
+        "Notes": "createProductAppointment"
     }
 ]
