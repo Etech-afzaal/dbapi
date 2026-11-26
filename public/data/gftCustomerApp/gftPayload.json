@@ -1774,11 +1774,56 @@
         "JData": {
             "P_ACTION_CODE": "ORD.I.PRODUCT_APPOINTMENT",
             "P_ORDER_ID": "ORD-4001",
+            "P_ORDER_TYPE": "Redeem",
             "P_LOCATION": "Dolmen Mall",
             "P_APPOINTMENT_DATE": "2026-12-04",
             "P_TIME_SLOT": "10:00 am - 12:00 pm",
             "P_COMMENTS": "I will pick up my order."
         },
         "Notes": "createProductAppointment"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "ORD.I.PHYSICAL_SELL_REQUEST",
+            "P_ACCOUNT_NUMBER": "P-1042",
+            "P_ASSET_CODE": "GLD",
+            "P_CUSTOMER_REQUEST": {
+                "P_WEIGHT": 0.829,
+                "P_WEIGHT_UNIT": "g",
+                "P_DATE_OF_PURCHASE": "2025-12-04",
+                "P_KARAT": "24 kt",
+                "P_PAYMENT_MODE": "Cash",
+                "P_DESCRIPTION": "Physical gold item",
+                "P_MEDIA_LIBRARY": [
+                    {
+                        "media_url": "/uploads/gold-item-1.jpg",
+                        "media_type": "image",
+                        "is_featured": true
+                    }
+                ]
+            }
+        },
+        "Notes": "createPhysicalSellRequest"
     }
 ]
