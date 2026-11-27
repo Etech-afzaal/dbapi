@@ -585,25 +585,12 @@
         "JMetaData": {},
         "JData": {
             "P_ACTION_CODE": "CUS.U.CUSTOMER",
-            "P_CUSTOMER_REC_ID": 2,
-            "P_FIRST_NAME": "Ali",
-            "P_LAST_NAME": "Khan",
-            "P_EMAIL": "ali.khan@example.com",
-            "P_PHONE": "03009876543",
-            "P_WHATSAPP_NUMBER": "03009876543",
-            "P_NATIONAL_ID": "3520212345671",
-            "P_PASSWORD": "",
-            "P_RESIDENTIAL_ADDRESS": {
-                "address_line_1": "House 50, Street 12",
-                "address_line_2": "Block B, Model Town",
-                "city": "Lahore",
-                "state": "Punjab",
-                "postal_code": "54700",
-                "country": "Pakistan"
-            },
-            "P_CUSTOMER_STATUS": "active"
+            "P_ACCOUNT_NUM": "ACCOUNT_NUMBER",
+            "P_UPDATE_TYPE": "NAME",
+            "P_FIRST_NAME": "New First Name",
+            "P_LAST_NAME": "New Last Name"
         },
-        "Notes": "upsertCustomer"
+        "Notes": "updateCustomer"
     },
     {
         "JHeader": {
@@ -1825,5 +1812,61 @@
             }
         },
         "Notes": "createPhysicalSellRequest"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "INV.S.INVENTORY_BY_AMOUNT",
+            "P_AMOIUNT": "2100.00"
+        },
+        "Notes": "createPhysicalSellRequest"
+    },
+    {
+        "JHeader": {
+            "client": "BlinkRide",
+            "clientIP": "72.255.1.149",
+            "accessToken": "fad9017e31bd0927a6bc42996df9e22708b736112f3ef801fd30d7213c146a03",
+            "accessKey": "0f5aac120ac2746e8548dcdb565b06d9772248b51ab669f45c08dc51a4291f16",
+            "Source": "AZSPostman",
+            "Target": "GFTAPI",
+            "deviceType": "Mobile",
+            "deviceInfo": "iPhone 14 A2483",
+            "deviceID": "72.255.1.149",
+            "viewName": "LOGIN",
+            "clientVersion": "1.0.0",
+            "APIVersion": "1.0.1",
+            "requestedURL": "http://domain.com/WebAPI/ProcessRequest",
+            "debug": "false",
+            "GPSLatitude": "40.78200",
+            "GPSLongitude": "-73.97783",
+            "GPSSpeed": "22",
+            "GPSBearing": "55"
+        },
+        "JMetaData": {},
+        "JData": {
+            "P_ACTION_CODE": "ORG.S.E_WALLETS",
+            "P_ORGRNIZATION_NAME": "GFT"
+        },
+        "Notes": "getEWallets"
     }
 ]
